@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{52947F5C-8304-4348-9055-F366489F208B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnifiedNetwork</RootNamespace>
+    <AssemblyName>UnifiedNetwork</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\..\..\en-eu-x-gm\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Core.ExceptionHandler">
+      <HintPath>..\..\..\..\en-eu-x-gm\Bin\x64\Core.ExceptionHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CacheSync\AddFail.cs" />
+    <Compile Include="CacheSync\AddObserver.cs" />
+    <Compile Include="CacheSync\AddOk.cs" />
+    <Compile Include="CacheSync\IObservable.cs" />
+    <Compile Include="CacheSync\IObserver.cs" />
+    <Compile Include="CacheSync\LocalObserver.cs" />
+    <Compile Include="CacheSync\LocalObserverSync.cs" />
+    <Compile Include="CacheSync\Message.cs" />
+    <Compile Include="CacheSync\Observable.cs" />
+    <Compile Include="CacheSync\ObservableCollection.cs" />
+    <Compile Include="CacheSync\ObservableIdentifier.cs" />
+    <Compile Include="CacheSync\Observer.cs" />
+    <Compile Include="CacheSync\ObserverFactory.cs" />
+    <Compile Include="CacheSync\ObserverProxy.cs" />
+    <Compile Include="CacheSync\ObserverSync.2.cs" />
+    <Compile Include="CacheSync\ObserverSync.cs" />
+    <Compile Include="CacheSync\ResetDirty.cs" />
+    <Compile Include="CacheSync\SetDirty.cs" />
+    <Compile Include="CacheSync\StartSync.cs" />
+    <Compile Include="CacheSync\Synchronized.cs" />
+    <Compile Include="Cooperation\AsyncResultSync.cs" />
+    <Compile Include="Cooperation\Box.cs" />
+    <Compile Include="Cooperation\CallbackSync.cs" />
+    <Compile Include="Cooperation\EnumProcessor.cs" />
+    <Compile Include="Cooperation\FailMessage.cs" />
+    <Compile Include="Cooperation\FunctionSync.2.cs" />
+    <Compile Include="Cooperation\FunctionSync.cs" />
+    <Compile Include="Cooperation\IErrorCode.cs" />
+    <Compile Include="Cooperation\IOperationProcessor.cs" />
+    <Compile Include="Cooperation\IResultReceiver.cs" />
+    <Compile Include="Cooperation\ISynchronizable.2.cs" />
+    <Compile Include="Cooperation\ISynchronizable.cs" />
+    <Compile Include="Cooperation\Message.cs" />
+    <Compile Include="Cooperation\NullProcessor.cs" />
+    <Compile Include="Cooperation\OkMessage.cs" />
+    <Compile Include="Cooperation\OkOrFailProcessor.cs" />
+    <Compile Include="Cooperation\OneResultProcessor.cs" />
+    <Compile Include="Cooperation\Operation.cs" />
+    <Compile Include="Cooperation\OperationPerformance.cs" />
+    <Compile Include="Cooperation\OperationPerformanceDigest.cs" />
+    <Compile Include="Cooperation\OperationProbe.cs" />
+    <Compile Include="Cooperation\OperationProcessor.2.cs" />
+    <Compile Include="Cooperation\OperationProcessor.cs" />
+    <Compile Include="Cooperation\OperationProxy.cs" />
+    <Compile Include="Cooperation\ReturnOkProcessor.cs" />
+    <Compile Include="Cooperation\ReturnOneProcessor.cs" />
+    <Compile Include="Cooperation\StepProbe.cs" />
+    <Compile Include="Cooperation\SyncExtention.cs" />
+    <Compile Include="Cooperation\Test\Test.cs" />
+    <Compile Include="Cooperation\Test\TestOp.cs" />
+    <Compile Include="Cooperation\Test\TestOpProcessor.cs" />
+    <Compile Include="Cooperation\ValueSync.cs" />
+    <Compile Include="EntityGraph\DummyEntityGraphNode.cs" />
+    <Compile Include="EntityGraph\EntityGraphIdentifier.cs" />
+    <Compile Include="EntityGraph\EntityGraphNode.cs" />
+    <Compile Include="EntityGraph\IEntityGraphNode.cs" />
+    <Compile Include="EntityGraph\OperationTimeReportElement.cs" />
+    <Compile Include="Entity\Entity.cs" />
+    <Compile Include="Entity\EntityConnection.cs" />
+    <Compile Include="Entity\EntityProcessor.2.cs" />
+    <Compile Include="Entity\EntityProcessor.3.cs" />
+    <Compile Include="Entity\EntityProcessor.cs" />
+    <Compile Include="Entity\GetEntitySync.cs" />
+    <Compile Include="Entity\IEntity.cs" />
+    <Compile Include="Entity\IEntityAdapter.cs" />
+    <Compile Include="Entity\IEntityProcessor.2.cs" />
+    <Compile Include="Entity\IEntityProcessor.cs" />
+    <Compile Include="Entity\IEntityProxy.cs" />
+    <Compile Include="Entity\Location.cs" />
+    <Compile Include="Entity\LookUp.cs" />
+    <Compile Include="Entity\OperationAggregation.cs" />
+    <Compile Include="Entity\OperationSync.2.cs" />
+    <Compile Include="Entity\OperationSync.3.cs" />
+    <Compile Include="Entity\OperationSync.cs" />
+    <Compile Include="Entity\Operations\BindEntity.cs" />
+    <Compile Include="Entity\Operations\BindEntityResult.cs" />
+    <Compile Include="Entity\Operations\Identify.cs" />
+    <Compile Include="Entity\Operations\Messages.cs" />
+    <Compile Include="Entity\Operations\RequestClose.cs" />
+    <Compile Include="Entity\Operations\SelectEntity.cs" />
+    <Compile Include="Entity\Processors\SelectEntityProcessor.cs" />
+    <Compile Include="Entity\Service.cs" />
+    <Compile Include="Entity\Test\AService.cs" />
+    <Compile Include="Entity\Test\BOP.cs" />
+    <Compile Include="Entity\Test\BService.cs" />
+    <Compile Include="Entity\Test\Test.cs" />
+    <Compile Include="Entity\Test\TestOp.cs" />
+    <Compile Include="Entity\Test\TestOpProcessor.cs" />
+    <Compile Include="FunctionSelector\IFunctionSelector.cs" />
+    <Compile Include="LocationFree\IAsyncLookUp.cs" />
+    <Compile Include="LocationFree\MultipleLookUp.cs" />
+    <Compile Include="LocationFree\SingleLookUp.cs" />
+    <Compile Include="LocationService\HostInfo.cs" />
+    <Compile Include="LocationService\LocationService.cs" />
+    <Compile Include="LocationService\LookUp.cs" />
+    <Compile Include="LocationService\Operations\Operations.cs" />
+    <Compile Include="LocationService\Operations\Query.cs" />
+    <Compile Include="LocationService\Operations\Register.cs" />
+    <Compile Include="LocationService\Operations\ServiceOperations.cs" />
+    <Compile Include="LocationService\Operations\Update.cs" />
+    <Compile Include="LocationService\Processors\QueryProcessor.cs" />
+    <Compile Include="LocationService\Processors\RegisterProcessor.cs" />
+    <Compile Include="LocationService\Processors\UpdateProcessor.cs" />
+    <Compile Include="LocationService\ServiceInfo.cs" />
+    <Compile Include="LocationService\Test\ABOperation.cs" />
+    <Compile Include="LocationService\Test\AService.cs" />
+    <Compile Include="LocationService\Test\BService.cs" />
+    <Compile Include="LocationService\Test\Plus1.cs" />
+    <Compile Include="LocationService\Test\Plus1Processor.cs" />
+    <Compile Include="OperationService\LookUp.cs" />
+    <Compile Include="OperationService\OperationAggregation.cs" />
+    <Compile Include="OperationService\OperationSync.2.cs" />
+    <Compile Include="OperationService\OperationSync.3.cs" />
+    <Compile Include="OperationService\OperationSync.cs" />
+    <Compile Include="OperationService\PerformanceTest.cs" />
+    <Compile Include="OperationService\Service.cs" />
+    <Compile Include="OperationService\Test\Service1.cs" />
+    <Compile Include="OperationService\Test\Service2.cs" />
+    <Compile Include="OperationService\Test\Test.cs" />
+    <Compile Include="OperationService\Test\TestOp.cs" />
+    <Compile Include="OperationService\Test\TestOperations.cs" />
+    <Compile Include="OperationService\Test\TestOpProcessor.cs" />
+    <Compile Include="OperationService\Test\TestService.cs" />
+    <Compile Include="PerfMon\PCWrapper.cs" />
+    <Compile Include="PerfMon\PerformanceMonitor.cs" />
+    <Compile Include="PipedNetwork\Acceptor.cs" />
+    <Compile Include="PipedNetwork\ClosePipe.cs" />
+    <Compile Include="PipedNetwork\Message.cs" />
+    <Compile Include="PipedNetwork\OpenPipe.cs" />
+    <Compile Include="PipedNetwork\Peer.cs" />
+    <Compile Include="PipedNetwork\Pipe.cs" />
+    <Compile Include="PipedNetwork\Test\Test.cs" />
+    <Compile Include="ProfileService\DailyChart.cs" />
+    <Compile Include="ProfileService\LogMachine.cs" />
+    <Compile Include="ProfileService\LogProfile.cs" />
+    <Compile Include="ProfileService\MachineStatusRecord.cs" />
+    <Compile Include="ProfileService\ProfileDataContext.cs" />
+    <Compile Include="ProfileService\Profiler.cs" />
+    <Compile Include="ProfileService\SystemMonitor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PublishSubscribe\Broker.cs" />
+    <Compile Include="PublishSubscribe\ContentAddedEventArgs.cs" />
+    <Compile Include="PublishSubscribe\ContentRemovedEventArgs.cs" />
+    <Compile Include="PublishSubscribe\PublisherRemovedEventArgs.cs" />
+    <Compile Include="PublishSubscribe\PublishingEventArgs.cs" />
+    <Compile Include="PublishSubscribe\SubscriberRemovedEventArgs.cs" />
+    <Compile Include="PublishSubscribe\TopicClosedEventArgs.cs" />
+    <Compile Include="ReportService\Operations\EnableOperationTimeReport.cs" />
+    <Compile Include="ReportService\Operations\EnableOperationTimeReportMessage.cs" />
+    <Compile Include="ReportService\Operations\Operations.cs" />
+    <Compile Include="ReportService\Operations\ReportLookUpInfoMessage.cs" />
+    <Compile Include="ReportService\Operations\ReportOperationTimeReportMessage.cs" />
+    <Compile Include="ReportService\Operations\ReportSelectMessage.cs" />
+    <Compile Include="ReportService\Operations\ReportServiceOperationMessages.cs" />
+    <Compile Include="ReportService\Operations\ReportUnderingListMessage.cs" />
+    <Compile Include="ReportService\Operations\RequestLookUpInfo.cs" />
+    <Compile Include="ReportService\Operations\RequestLookUpInfoMessage.cs" />
+    <Compile Include="ReportService\Operations\RequestOperationTimeReport.cs" />
+    <Compile Include="ReportService\Operations\RequestOperationTimeReportMessage.cs" />
+    <Compile Include="ReportService\Operations\RequestSelectMessage.cs" />
+    <Compile Include="ReportService\Operations\RequestShutDownEntity.cs" />
+    <Compile Include="ReportService\Operations\RequestShutDownEntityMessage.cs" />
+    <Compile Include="ReportService\Operations\RequestUnderingList.cs" />
+    <Compile Include="ReportService\Operations\RequestUnderingListMessage.cs" />
+    <Compile Include="ReportService\Operations\ServerPair.cs" />
+    <Compile Include="ReportService\Processors\EnableOperationTimeReportProcessor.cs" />
+    <Compile Include="ReportService\Processors\RequestOperationTimeReportProcessor.cs" />
+    <Compile Include="ReportService\Processors\RequestShutDownEntityProcessor.cs" />
+    <Compile Include="ReportService\Processors\RequsetLookUpInfoProcessor.cs" />
+    <Compile Include="ReportService\Processors\RequsetUnderingListProcessor.cs" />
+    <Compile Include="ReportService\ReportAdminClient.cs" />
+    <Compile Include="ReportService\ReportService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Core\Core.csproj">
+      <Project>{ef967304-f220-4581-b149-1d46a3fe2527}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\log4net\log4net\log4net.csproj">
+      <Project>{181fe707-e161-4722-9f38-6aaab6faa106}</Project>
+      <Name>log4net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\Utility\Utility.csproj">
+      <Project>{9b72c18e-20a4-4a3e-bcb6-f2eeef062b5f}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

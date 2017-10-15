@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{592AEB18-9BFA-42BE-A4FD-0B9633FCFFEE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RemoteControlSystem</RootNamespace>
+    <AssemblyName>RCCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\RCClient\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Core">
+      <HintPath>..\..\..\..\RCClient\Core.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authority.cs" />
+    <Compile Include="BaseConfiguration.cs" />
+    <Compile Include="ClientMessage\AddUserMessage.cs" />
+    <Compile Include="ClientMessage\ChangeAuthorityMessage.cs" />
+    <Compile Include="ClientMessage\ChangeMyPasswordMessage.cs" />
+    <Compile Include="ClientMessage\ChangePasswordMessage.cs" />
+    <Compile Include="ClientMessage\ClientAddedMessage.cs" />
+    <Compile Include="ClientMessage\ClientInfoMessage.cs" />
+    <Compile Include="ClientMessage\ClientRemovedMessage.cs" />
+    <Compile Include="ClientMessage\ControlEnterMessage.cs" />
+    <Compile Include="ClientMessage\ControlEnterReply.cs" />
+    <Compile Include="ClientMessage\ControlFinishMessage.cs" />
+    <Compile Include="ClientMessage\ControlReplyMessage.cs" />
+    <Compile Include="ClientMessage\ControlRequestMessage.cs" />
+    <Compile Include="ClientMessage\EmergencyCallMessage.cs" />
+    <Compile Include="ClientMessage\GetUserAuthMesssage.cs" />
+    <Compile Include="ClientMessage\GetUserAuthReply.cs" />
+    <Compile Include="ClientMessage\GetUserListMessage.cs" />
+    <Compile Include="ClientMessage\GetUserListReply.cs" />
+    <Compile Include="ClientMessage\LoginMessage.cs" />
+    <Compile Include="ClientMessage\LoginReply.cs" />
+    <Compile Include="ClientMessage\NotifyMessage.cs" />
+    <Compile Include="ClientMessage\OpToolMessages.cs" />
+    <Compile Include="ClientMessage\PingMessage.cs" />
+    <Compile Include="ClientMessage\RemoveUserMessage.cs" />
+    <Compile Include="ClientMessage\ServerGroupChangeMessage.cs" />
+    <Compile Include="ClientMessage\TemplateChangeMessage.cs" />
+    <Compile Include="ClientMessage\WorkGroupChangeMessage.cs" />
+    <Compile Include="Common\ClientVersion.cs" />
+    <Compile Include="ControlMessage\CheckPatchProcessResultMessage.cs" />
+    <Compile Include="ControlMessage\ChildProcessLogConnectMessage.cs" />
+    <Compile Include="ControlMessage\ChildProcessLogDisconnectMessage.cs" />
+    <Compile Include="ControlMessage\ChildProcessLogListReplyMessage.cs" />
+    <Compile Include="ControlMessage\ChildProcessLogListRequestMessage.cs" />
+    <Compile Include="ControlMessage\ChildProcessLogMessage.cs" />
+    <Compile Include="ControlMessage\ChildProcessLogReplyMessage.cs" />
+    <Compile Include="ControlMessage\ChildProcessLogRequestMessage.cs" />
+    <Compile Include="ControlMessage\ControlMessages.cs" />
+    <Compile Include="ControlMessage\ExeInfoReplyMessage.cs" />
+    <Compile Include="ControlMessage\ExeInfoRequestMessage.cs" />
+    <Compile Include="ControlMessage\FunctionReplyMessage.cs" />
+    <Compile Include="ControlMessage\FunctionRequestMessage.cs" />
+    <Compile Include="CpuUsage.cs" />
+    <Compile Include="EmergencyInformationData.cs" />
+    <Compile Include="Extension.cs" />
+    <Compile Include="IWorkGroupCondition.cs" />
+    <Compile Include="IWorkGroupStructureNode.cs" />
+    <Compile Include="Log.2.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="MessageType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RCClient.cs" />
+    <Compile Include="RCProcess.cs" />
+    <Compile Include="RCProcessCollection.cs" />
+    <Compile Include="RCProcessScheduler.cs" />
+    <Compile Include="RCProcessSchedulerCollection.cs" />
+    <Compile Include="ServerGroupCondition.cs" />
+    <Compile Include="ServerGroupStructureNode.cs" />
+    <Compile Include="ServerMessage\AddProcessMessage.cs" />
+    <Compile Include="ServerMessage\CheckPatchProcessMessage.cs" />
+    <Compile Include="ServerMessage\ClientInitMessage.cs" />
+    <Compile Include="ServerMessage\ClientSelfUpdateMessage.cs" />
+    <Compile Include="ServerMessage\FileDistributeMessage.cs" />
+    <Compile Include="ServerMessage\KillProcessMessage.cs" />
+    <Compile Include="ServerMessage\KillUpdateProcessMessage.cs" />
+    <Compile Include="ServerMessage\LogProcessMessage.cs" />
+    <Compile Include="ServerMessage\ModifyProcessMessage.cs" />
+    <Compile Include="ServerMessage\MutexCommandAttribute.cs" />
+    <Compile Include="ServerMessage\PerformanceUpdateMessage.cs" />
+    <Compile Include="ServerMessage\PingMessage.cs" />
+    <Compile Include="ServerMessage\RCClientMessages.cs" />
+    <Compile Include="ServerMessage\RemoveProcessMessage.cs" />
+    <Compile Include="ServerMessage\ServerInfoMessage.cs" />
+    <Compile Include="ServerMessage\StandardInProcessMessage.cs" />
+    <Compile Include="ServerMessage\StartProcessMessage.cs" />
+    <Compile Include="ServerMessage\StateChangeProcessMessage.cs" />
+    <Compile Include="ServerMessage\StopProcessMessage.cs" />
+    <Compile Include="ServerMessage\UpdateProcessMessage.cs" />
+    <Compile Include="WorkGroupCondition.cs" />
+    <Compile Include="WorkGroupStructureNode.cs" />
+    <Compile Include="XmlSerializationServerGroups.cs" />
+    <Compile Include="XmlSerializationWorkGroups.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)$(TargetName)$(TargetExt)" "$(TargetDir)..\RCServer\" /Y
+xcopy "$(TargetDir)$(TargetName)$(TargetExt)" "$(TargetDir)..\HeroesCommandClient\" /Y
+xcopy "$(TargetDir)$(TargetName)$(TargetExt)" "$(TargetDir)..\HeroesOpTool\" /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

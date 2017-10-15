@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A5ADB3EE-37BD-4CFA-8A5C-1761A5EC242A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nexon.Com.UserWrapper</RootNamespace>
+    <AssemblyName>Nexon.Com.UserWrapper</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\..\..\en-eu-x-gm\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthUseCode.cs" />
+    <Compile Include="Character\Character.cs" />
+    <Compile Include="Character\DAO\UserBasicGetInfoSoapWrapper.cs" />
+    <Compile Include="Character\DAO\UserCheckCharacterBlockSoapWrapper.cs" />
+    <Compile Include="Character\DAO\UserSsnCheckMatchFullSoapWrapper.cs" />
+    <Compile Include="Character\DAO\UserSsnCheckMatchSubSoapWrapper.cs" />
+    <Compile Include="Character\DAO\UserVerifySoapWrapper.cs" />
+    <Compile Include="ErrorCode.cs" />
+    <Compile Include="FreeCash\FreeCash.cs" />
+    <Compile Include="FreeCash\UserBasicGetInfoSoapWrapper.cs" />
+    <Compile Include="GuestUser\GuestUser.cs" />
+    <Compile Include="GuestUser\UserVerifyWithSsnSoapWrapper.cs" />
+    <Compile Include="GuildInGame\DAO\UserGetInfonSchoolInfoSoapWrapper.cs" />
+    <Compile Include="GuildInGame\GuildInGame.cs" />
+    <Compile Include="MainPageCode.cs" />
+    <Compile Include="MobileCompanyCode.cs" />
+    <Compile Include="NexonNameChangeUseCode.cs" />
+    <Compile Include="NexonStick\NexonStick.cs" />
+    <Compile Include="NexonStick\UserBasicGetInfoSoapWrapper.cs" />
+    <Compile Include="NexonStick\UserCheckAuthLogSNSoapWrapper.cs" />
+    <Compile Include="NexonStick\UserCheckEnableMobileAuthSoapWrapper.cs" />
+    <Compile Include="NexonStick\UserConfirmMobileAuthSoapWrapper.cs" />
+    <Compile Include="NexonStick\UserEncryptCertReqInfoSoapWrapper.cs" />
+    <Compile Include="NexonStick\UserSendMobileAuthSoapWrapper.cs" />
+    <Compile Include="OpenConfigureCode.cs" />
+    <Compile Include="P2\P2.cs" />
+    <Compile Include="P2\UserCheckNexonNameSoapWrapper.cs" />
+    <Compile Include="P2\UserCheckValidNexonIDnPasswordSoapWrapper.cs" />
+    <Compile Include="P2\UserGetIdentitySNEventSoapWrapper.cs" />
+    <Compile Include="P2\UserGetInfoSoapWrapper.cs" />
+    <Compile Include="P2\UserGetNexonSNByNexonIDSoapWrapper.cs" />
+    <Compile Include="P2\UserGetNexonSNByNexonNameSoapWrapper.cs" />
+    <Compile Include="P2\UserModifyMainPageCodeSoapWrapper.cs" />
+    <Compile Include="P2\UserModifyNexonNameSoapWrapper.cs" />
+    <Compile Include="P2\UserModifyOpenConfigureSoapWrapper.cs" />
+    <Compile Include="P2\UserModifyRealBirthSoapWrapper.cs" />
+    <Compile Include="P2\UserModifySchoolInfoSoapWrapper.cs" />
+    <Compile Include="P2\UserWriteStatusGetInfoSoapWrapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="QplayWeb\QplayWeb.cs" />
+    <Compile Include="QplayWeb\UserCheckCharacterBlockSoapWrapper.cs" />
+    <Compile Include="QplayWeb\UserVerifySoapWrapper.cs" />
+    <Compile Include="QplayWeb\UserWriteStatusGetInfoSoapWrapper.cs" />
+    <Compile Include="RealBirthCode.cs" />
+    <Compile Include="SchoolCode.cs" />
+    <Compile Include="SchoolInfo.cs" />
+    <Compile Include="SecureLogin\SecureLogin.cs" />
+    <Compile Include="SecureLogin\UserBasicGetInfoSoapWrapper.cs" />
+    <Compile Include="SecureLogin\UserBasicGetListSoapWrapper.cs" />
+    <Compile Include="SecureLogin\UserCheckAuthLogSNSoapWrapper.cs" />
+    <Compile Include="SecureLogin\UserCheckEnableMobileAuthSoapWrapper.cs" />
+    <Compile Include="SecureLogin\UserConfirmMobileAuthSoapWrapper.cs" />
+    <Compile Include="SecureLogin\UserEncryptCertReqInfoSoapWrapper.cs" />
+    <Compile Include="SecureLogin\UserSendMobileAuthSoapWrapper.cs" />
+    <Compile Include="SecureLogin\UserVerifySoapWrapper.cs" />
+    <Compile Include="SEOUL2012Web\SEOUL2012Web.cs" />
+    <Compile Include="SEOUL2012Web\UserGetIdentitySNSoapWrapper.cs" />
+    <Compile Include="SexCode.cs" />
+    <Compile Include="UserAPIServerURLProvider.cs" />
+    <Compile Include="UserAPI\Character\character.cs" />
+    <Compile Include="UserAPI\Character\CheckCharacterBlockCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\Character\CheckCharacterBlockCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\Character\CheckMatchUserSsn_FullCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\Character\CheckMatchUserSsn_FullCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\Character\CheckMatchUserSsn_SubCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\Character\CheckMatchUserSsn_SubCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\Character\CheckValidNexonIDnPasswordCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\Character\CheckValidNexonIDnPasswordCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\Character\GetUserBasicInfoCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\Character\GetUserBasicInfoCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\FreeCash\freecash.cs" />
+    <Compile Include="UserAPI\FreeCash\GetUserBasicInfoCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\FreeCash\GetUserBasicInfoCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\GuestUser\CheckEnableChangeUserCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\GuestUser\CheckEnableChangeUserCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\GuestUser\guestuser.cs" />
+    <Compile Include="UserAPI\GuildInGame\GetUserInfonSchoolInfoCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\GuildInGame\GetUserInfonSchoolInfoCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\GuildInGame\guildingame.cs" />
+    <Compile Include="UserAPI\NexonStick\CheckEnableMobileAuthCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\NexonStick\CheckEnableMobileAuthCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\NexonStick\CheckMatchUserSsn_FullCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\NexonStick\CheckMatchUserSsn_FullCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\NexonStick\CheckValidAuthLogSNCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\NexonStick\CheckValidAuthLogSNCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\NexonStick\CheckValidNexonIDnPasswordCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\NexonStick\CheckValidNexonIDnPasswordCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\NexonStick\ConfirmSMSAuthOwnerCfmCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\NexonStick\ConfirmSMSAuthOwnerCfmCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\NexonStick\GetCommonCertAuthCryptCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\NexonStick\GetCommonCertAuthCryptCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\NexonStick\GetUserBasicInfoCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\NexonStick\GetUserBasicInfoCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\NexonStick\nexonstick.cs" />
+    <Compile Include="UserAPI\NexonStick\SendSMSAuthOwnerCfmCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\NexonStick\SendSMSAuthOwnerCfmCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\P2\CheckNexonNameCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\P2\CheckNexonNameCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\P2\CheckValidNexonIDnPasswordCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\P2\CheckValidNexonIDnPasswordCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\P2\GetUserIdentitySN_EventCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\P2\GetUserIdentitySN_EventCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\P2\GetUserInfoCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\P2\GetUserInfoCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\P2\GetUserNexonSN_ByNexonIDCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\P2\GetUserNexonSN_ByNexonIDCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\P2\GetUserNexonSN_ByNexonNameCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\P2\GetUserNexonSN_ByNexonNameCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\P2\GetUserWriteStatusCodeCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\P2\GetUserWriteStatusCodeCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\P2\ModifyMainPageCodeCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\P2\ModifyMainPageCodeCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\P2\ModifyNexonNameCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\P2\ModifyNexonNameCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\P2\ModifyOpenConfigureCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\P2\ModifyOpenConfigureCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\P2\ModifyRealBirthCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\P2\ModifyRealBirthCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\P2\ModifySchoolInfoCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\P2\ModifySchoolInfoCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\P2\p2.cs" />
+    <Compile Include="UserAPI\QplayWeb\CheckCharacterBlockCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\QplayWeb\CheckCharacterBlockCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\QplayWeb\CheckValidNexonIDCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\QplayWeb\CheckValidNexonIDCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\QplayWeb\CheckValidNexonIDnPasswordCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\QplayWeb\CheckValidNexonIDnPasswordCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\QplayWeb\GetUserWriteStatusCode2CompletedEventArgs.cs" />
+    <Compile Include="UserAPI\QplayWeb\GetUserWriteStatusCode2CompletedEventHandler.cs" />
+    <Compile Include="UserAPI\QplayWeb\GetUserWriteStatusCodeCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\QplayWeb\GetUserWriteStatusCodeCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\QplayWeb\qplayweb.cs" />
+    <Compile Include="UserAPI\SecureLogin\CheckValidAuthLogSNCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\SecureLogin\CheckValidAuthLogSNCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\SecureLogin\ConfirmSMSAuthOwnerCfmCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\SecureLogin\ConfirmSMSAuthOwnerCfmCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\SecureLogin\GetCommonCertAuthCryptCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\SecureLogin\GetCommonCertAuthCryptCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\SecureLogin\GetOTPRemoveMobileCountCheckCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\SecureLogin\GetOTPRemoveMobileCountCheckCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\SecureLogin\GetUserBasicInfoCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\SecureLogin\GetUserBasicInfoCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\SecureLogin\GetUserBasicListCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\SecureLogin\GetUserBasicListCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\SecureLogin\securelogin.cs" />
+    <Compile Include="UserAPI\SecureLogin\SendSMSAuthOwnerCfmCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\SecureLogin\SendSMSAuthOwnerCfmCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\SEOUL2012Web\GetUserIdentitySNCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\SEOUL2012Web\GetUserIdentitySNCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\SEOUL2012Web\seoul2012web.cs" />
+    <Compile Include="UserAPI\Warning\AddWarningInfoCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\Warning\AddWarningInfoCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\Warning\GetWarningInfoCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\Warning\GetWarningInfoCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\Warning\GetWarningListCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\Warning\GetWarningListCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\Warning\GetWarningLogListCompletedEventArgs.cs" />
+    <Compile Include="UserAPI\Warning\GetWarningLogListCompletedEventHandler.cs" />
+    <Compile Include="UserAPI\Warning\warning.cs" />
+    <Compile Include="UserBasicGetListnRepresentSchoolResult.cs" />
+    <Compile Include="UserBasicGetListSoapResult.cs" />
+    <Compile Include="UserBasicInfo.cs" />
+    <Compile Include="UserBasicInfonRepresentSchoolInfo.cs" />
+    <Compile Include="UserCheckAuthLogSNSoapResult.cs" />
+    <Compile Include="UserCheckCharacterBlockSoapResult.cs" />
+    <Compile Include="UserCheckEnableMobileAuthSoapResult.cs" />
+    <Compile Include="UserCheckNexonNameSoapResult.cs" />
+    <Compile Include="UserCheckValidNexonIDnPasswordSoapResult.cs" />
+    <Compile Include="UserCode.cs" />
+    <Compile Include="UserConfirmMobileAuthSoapResult.cs" />
+    <Compile Include="UserEncryptCertReqInfoSoapResult.cs" />
+    <Compile Include="UserGetIdentitySNEventSoapResult.cs" />
+    <Compile Include="UserGetIdentitySNSoapResult.cs" />
+    <Compile Include="UserGetListSoapResult.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="UserInvalidAccessException.cs" />
+    <Compile Include="UserModifyMainPageCodeSoapResult.cs" />
+    <Compile Include="UserModifyNexonNameSoapResult.cs" />
+    <Compile Include="UserModifyOpenConfigureSoapResult.cs" />
+    <Compile Include="UserModifyRealBirthSoapResult.cs" />
+    <Compile Include="UserSendMobileAuthSoapResult.cs" />
+    <Compile Include="UserSsnCheckMatchResult.cs" />
+    <Compile Include="UserUtil.cs" />
+    <Compile Include="UserVerifySoapResult.cs" />
+    <Compile Include="UserVerifyWithSsnSoapResult.cs" />
+    <Compile Include="UserWarningGetListSoapResult.cs" />
+    <Compile Include="UserWarningInfo.cs" />
+    <Compile Include="UserWrapperException.cs" />
+    <Compile Include="UserWriteStatusGetInfoSoapResult.cs" />
+    <Compile Include="UserXMLParseException.cs" />
+    <Compile Include="Warning\UserWarningGetInfoSoapWrapper.cs" />
+    <Compile Include="Warning\Warning.cs" />
+    <Compile Include="WriteStatusCode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Nexon.Com\Nexon.Com\Nexon.Com.csproj">
+      <Project>{e5baa76a-c33c-401b-a1c8-8e6a09a9e0ea}</Project>
+      <Name>Nexon.Com</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

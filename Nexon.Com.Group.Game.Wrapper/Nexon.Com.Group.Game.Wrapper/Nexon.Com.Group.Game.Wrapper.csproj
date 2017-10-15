@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A67F450-D955-4A03-A317-6DD87D84F5DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nexon.Com.Group.Game.Wrapper</RootNamespace>
+    <AssemblyName>Nexon.Com.Group.Game.Wrapper</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\..\..\en-eu-x-gm\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code.cs" />
+    <Compile Include="GameCode.cs" />
+    <Compile Include="GroupBase\DAO\GroupGetInfoResult.cs" />
+    <Compile Include="GroupBase\DAO\GroupGetListResult.cs" />
+    <Compile Include="GroupBase\DAO\GroupResultBase.cs" />
+    <Compile Include="GroupBase\DAO\GroupSPWrapperBase.cs" />
+    <Compile Include="GroupBase\DAO\GroupUserGetInfoResult.cs" />
+    <Compile Include="GroupBase\DAO\GroupUserGetListResult.cs" />
+    <Compile Include="GroupBase\DAO\GroupUserSetResult.cs" />
+    <Compile Include="GroupBase\DAO\Korea\GroupCreateSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\Korea\GroupGetInfoByNameOutRowSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\Korea\GroupGetInfoSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\Korea\GroupGetListSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\Korea\GroupNMLinkSoapResult.cs" />
+    <Compile Include="GroupBase\DAO\Korea\GroupNMLinkSoapWrapper.cs" />
+    <Compile Include="GroupBase\DAO\Korea\GroupRemoveSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\Korea\GroupUserGetInfoSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\Korea\GroupUserGetListSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\Korea\GroupUserSetSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\Korea\UserGroupGetInfoResult.cs" />
+    <Compile Include="GroupBase\DAO\Korea\UserGroupGetInfoSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\Korea\UserGroupGetListSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\GroupChangeCharacterNameResult.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\GroupChangeCharacterNameSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\GroupCharacterNameChange_HeroesBackOfficeResult.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\GroupCharacterNameChange_HeroesBackOfficeSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\GroupCreateSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\GroupGetInfoSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\GroupGetListSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\GroupMemberGetInfoSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\GroupMemberGetListSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\GroupMemberLoginResult.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\GroupMemberLoginSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\GroupMemberModifyResult.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\GroupMemberModifySPWrpper.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\GroupMemberRemoveSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\GroupRemoveSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\UserGetGuildListSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\WatingMemberCreateSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\WatingMemberGetInfoResult.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\WatingMemberGetInfoSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\WatingMemberJoinSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\OverSea\WatingMemberRejectSPWrapper.cs" />
+    <Compile Include="GroupBase\DAO\UserGroupGetListResult.cs" />
+    <Compile Include="GroupBase\DataSource\GroupConnectionStringProvider.cs" />
+    <Compile Include="GroupBase\DataSource\GroupMasterConnectionStringProvider.cs" />
+    <Compile Include="GroupBase\Group.cs" />
+    <Compile Include="GroupBase\GroupCreateInitSetting.cs" />
+    <Compile Include="GroupBase\GroupCreateMasterInfo.cs" />
+    <Compile Include="GroupBase\GroupCreateMemberJoin.cs" />
+    <Compile Include="GroupBase\GroupCreateMemberType.cs" />
+    <Compile Include="GroupBase\GroupCreateResult.cs" />
+    <Compile Include="GroupBase\GroupCreateSkin.cs" />
+    <Compile Include="GroupBase\GroupMenuDefaultMenu.cs" />
+    <Compile Include="GroupConfig.cs" />
+    <Compile Include="GroupConfigSection.cs" />
+    <Compile Include="GroupException.cs" />
+    <Compile Include="GroupInfo.cs" />
+    <Compile Include="GroupMemberInfo.cs" />
+    <Compile Include="GroupPlatform.cs" />
+    <Compile Include="GroupUserInfo.cs" />
+    <Compile Include="GroupUserType.cs" />
+    <Compile Include="hereoes\GetGuildInfoCompletedEventArgs.cs" />
+    <Compile Include="hereoes\GetGuildInfoCompletedEventHandler.cs" />
+    <Compile Include="hereoes\GetGuildLatestArticleListCompletedEventArgs.cs" />
+    <Compile Include="hereoes\GetGuildLatestArticleListCompletedEventHandler.cs" />
+    <Compile Include="hereoes\GetMonthlyWebRankingListCompletedEventArgs.cs" />
+    <Compile Include="hereoes\GetMonthlyWebRankingListCompletedEventHandler.cs" />
+    <Compile Include="hereoes\GetWeeklyGameRankingListCompletedEventArgs.cs" />
+    <Compile Include="hereoes\GetWeeklyGameRankingListCompletedEventHandler.cs" />
+    <Compile Include="hereoes\GuildPRGetInfoCompletedEventArgs.cs" />
+    <Compile Include="hereoes\GuildPRGetInfoCompletedEventHandler.cs" />
+    <Compile Include="hereoes\GuildPRGetListCompletedEventArgs.cs" />
+    <Compile Include="hereoes\GuildPRGetListCompletedEventHandler.cs" />
+    <Compile Include="hereoes\GuildSearchGetListCompletedEventArgs.cs" />
+    <Compile Include="hereoes\GuildSearchGetListCompletedEventHandler.cs" />
+    <Compile Include="hereoes\GuildStoryGetInfoCompletedEventArgs.cs" />
+    <Compile Include="hereoes\GuildStoryGetInfoCompletedEventHandler.cs" />
+    <Compile Include="hereoes\GuildStoryGetListCompletedEventArgs.cs" />
+    <Compile Include="hereoes\GuildStoryGetListCompletedEventHandler.cs" />
+    <Compile Include="hereoes\heroes.cs" />
+    <Compile Include="hereoes\RefreshNMLinkCompletedEventArgs.cs" />
+    <Compile Include="hereoes\RefreshNMLinkCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\AllMemberGetListCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\AllMemberGetListCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\CheckGroupIDCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\CheckGroupIDCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\CheckGroupNameCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\CheckGroupNameCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\CreateCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\CreateCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\GroupChangeMasterCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\GroupChangeMasterCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\GroupGetInfoByGuildNameCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\GroupGetInfoByGuildNameCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\GroupGetInfoByGuildSNCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\GroupGetInfoByGuildSNCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\GroupGetListByGuildMasterCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\GroupGetListByGuildMasterCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\GroupGetListByGuildNameCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\GroupGetListByGuildNameCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\GroupInfo.cs" />
+    <Compile Include="HeroesGameGuild\GroupMemberGetInfoCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\GroupMemberGetInfoCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\GroupMemberInfo.cs" />
+    <Compile Include="HeroesGameGuild\GroupUserGetInfoCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\GroupUserGetInfoCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\GroupUserInfo.cs" />
+    <Compile Include="HeroesGameGuild\GroupUserTryJoinCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\GroupUserTryJoinCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\GroupUserType.cs" />
+    <Compile Include="HeroesGameGuild\heroes.cs" />
+    <Compile Include="HeroesGameGuild\MemberLoginCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\MemberLoginCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\RemoveCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\RemoveCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\UserGroupGetListCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\UserGroupGetListCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\UserGroupInfo.cs" />
+    <Compile Include="HeroesGameGuild\UserJoinApplyCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\UserJoinApplyCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\UserJoinCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\UserJoinCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\UserJoinRejectCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\UserJoinRejectCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\UserSecedeCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\UserSecedeCompletedEventHandler.cs" />
+    <Compile Include="HeroesGameGuild\UserTypeModifyCompletedEventArgs.cs" />
+    <Compile Include="HeroesGameGuild\UserTypeModifyCompletedEventHandler.cs" />
+    <Compile Include="HeroesGuild.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UserGroupInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Nexon.Com\Nexon.Com\Nexon.Com.csproj">
+      <Project>{e5baa76a-c33c-401b-a1c8-8e6a09a9e0ea}</Project>
+      <Name>Nexon.Com</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

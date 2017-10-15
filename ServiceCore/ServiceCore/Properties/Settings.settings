@@ -1,0 +1,326 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ServiceCore.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="heroesConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=127.0.0.1,1433;User Id=sa;Password=PASWORD;Initial Catalog=heroes&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=127.0.0.1,1433;User Id=sa;Password=PASWORD;Initial Catalog=heroes</Value>
+    </Setting>
+    <Setting Name="heroesContentsConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=127.0.0.1,1433;User Id=sa;Password=PASWORD;Initial Catalog=heroesContents&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=127.0.0.1,1433;User Id=sa;Password=PASWORD;Initial Catalog=heroesContents</Value>
+    </Setting>
+    <Setting Name="heroesLogConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=127.0.0.1,1433;User Id=sa;Password=PASWORD;Initial Catalog=heroesLog&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=127.0.0.1,1433;User Id=sa;Password=PASWORD;Initial Catalog=heroesLog</Value>
+    </Setting>
+    <Setting Name="NX_GROUP_REPLConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=127.0.0.1,1433;User Id=sa;Password=PASWORD;Initial Catalog=NX_GROUP_REPL&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=127.0.0.1,1433;User Id=sa;Password=PASWORD;Initial Catalog=NX_GROUP_REPL</Value>
+    </Setting>
+    <Setting Name="AdminClientServicePort" Type="System.UInt16" Scope="Application">
+      <Value Profile="(Default)">27011</Value>
+    </Setting>
+    <Setting Name="CafeAuthPort" Type="System.UInt16" Scope="Application">
+      <Value Profile="(Default)">10032</Value>
+    </Setting>
+    <Setting Name="CafeAuthDomainSN" Type="System.Byte" Scope="Application">
+      <Value Profile="(Default)">255</Value>
+    </Setting>
+    <Setting Name="CafeAuthDomainString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">마비노기 영웅전 미지정 도메인</Value>
+    </Setting>
+    <Setting Name="CashShopPort" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">6500</Value>
+    </Setting>
+    <Setting Name="CashShopServiceCode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MHERO</Value>
+    </Setting>
+    <Setting Name="CashShopServerNumber" Type="System.Byte" Scope="Application">
+      <Value Profile="(Default)">99</Value>
+    </Setting>
+    <Setting Name="CashShopRefundlessBalance" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="NISMSGameCode" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">33</Value>
+    </Setting>
+    <Setting Name="ChannelDistributionBound" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">70</Value>
+    </Setting>
+    <Setting Name="ChannelPossessionTimeDelay" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">30000</Value>
+    </Setting>
+    <Setting Name="ChannelListHighRecommend" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="ChannelListLowRecommend" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="EnableCheatingNoticeMail" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="PremiumPackageProductNo" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">72449</Value>
+    </Setting>
+    <Setting Name="PassportImmigratorGameCode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SVG028</Value>
+    </Setting>
+    <Setting Name="EnableDeveloperPassport" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="VersionMatchCRCSampleFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.\CRCSample.txt</Value>
+    </Setting>
+    <Setting Name="VersionMatchUpToDateFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.\UpToDateInfo.txt</Value>
+    </Setting>
+    <Setting Name="DSServicePort" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">27018</Value>
+    </Setting>
+    <Setting Name="DSPort" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">26000</Value>
+    </Setting>
+    <Setting Name="CafeAuthGameSN" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">33</Value>
+    </Setting>
+    <Setting Name="heroesTradeConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=127.0.0.1,1433;User Id=sa;Password=PASWORD;Initial Catalog=heroesMarketPlace&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=127.0.0.1,1433;User Id=sa;Password=PASWORD;Initial Catalog=heroesMarketPlace</Value>
+    </Setting>
+    <Setting Name="DSGiantCount" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">-1</Value>
+    </Setting>
+    <Setting Name="DSRedirectConsole" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MakeOrderIDWithRemoteIP" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="GuildChatWcfService" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="GRCRequestSeconds" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="DSGiantRaidMachineCount" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DSNormalRaidMachineCount" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DSPvpMachineCount" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="DSDevMachineCount" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">-1</Value>
+    </Setting>
+    <Setting Name="TalkWcfService" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="heroesRankConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=127.0.0.1,1433;User Id=sa;Password=PASWORD;Initial Catalog=heroesRank&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=127.0.0.1,1433;User Id=sa;Password=PASWORD;Initial Catalog=heroesRank</Value>
+    </Setting>
+    <Setting Name="heroesShareConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=127.0.0.1,1433;User ID=sa;Password=PASWORD;Initial Catalog=heroesShare&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=127.0.0.1,1433;User ID=sa;Password=PASWORD;Initial Catalog=heroesShare</Value>
+    </Setting>
+    <Setting Name="ClientDSServicePort" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">28018</Value>
+    </Setting>
+    <Setting Name="DSIsolateNormalRaidMachineCount" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">-1</Value>
+    </Setting>
+    <Setting Name="DSIsolateNormalQuest" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DSGiantRaidMachineIPs" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="heroesBcpPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\HeroesData\SQL</Value>
+    </Setting>
+    <Setting Name="heroesMaterialPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\data\Material</Value>
+    </Setting>
+    <Setting Name="heroesXMLPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\data\XML</Value>
+    </Setting>
+    <Setting Name="P2ServerAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">...</Value>
+    </Setting>
+    <Setting Name="AdminClientIPHeader" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="CafeAuthAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="CashShopIPAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="CheatingNoticeMailToAddr" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">admin@sdsdsdsdsds.com</Value>
+    </Setting>
+    <Setting Name="LoginPermissions" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">245</Value>
+    </Setting>
+    <Setting Name="LoginAgeMinInclusive" Type="System.UInt16" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="PassportImmigratorIP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="PlayfeedServerAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="PlayfeedServerPort" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">80</Value>
+    </Setting>
+    <Setting Name="PlayfeedServiceCode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SVG028</Value>
+    </Setting>
+    <Setting Name="PlayfeedLogType" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="PlayfeedTxtDumpTest" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MMOChannelMapFilePath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\data\MapPartition</Value>
+    </Setting>
+    <Setting Name="DSExecPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">..\..\..\Vindictus\Local Host Client\srcds.exe</Value>
+    </Setting>
+    <Setting Name="DSAuxParams" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">-allowdebug -game -lang en-eu-x-gm</Value>
+    </Setting>
+    <Setting Name="MailServerAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">smtp.sssss.co.kr.1231</Value>
+    </Setting>
+    <Setting Name="heroesContentsDB3" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">heroesContents.db3</Value>
+    </Setting>
+    <Setting Name="localizedTextDB3" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">localizedText.db3</Value>
+    </Setting>
+    <Setting Name="NGM_Disable" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="heroesWebConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\SQLEXPRESS;Initial Catalog=heroesLogin;Integrated Security=True&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.\SQLEXPRESS;Initial Catalog=heroesLogin;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="heroesLoginConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\SQLEXPRESS;Initial Catalog=heroesLogin;Integrated Security=True&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.\SQLEXPRESS;Initial Catalog=heroesLogin;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="heroesShopConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\SQLEXPRESS;Initial Catalog=heroesLogin;Integrated Security=True&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.\SQLEXPRESS;Initial Catalog=heroesLogin;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="heroesFriendshipConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\sqlexpress;Initial Catalog=heroes;Integrated Security=True&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.\sqlexpress;Initial Catalog=heroes;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="NX_GROUPConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\sqlexpress;Initial Catalog=NX_GROUP;Integrated Security=True&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.\sqlexpress;Initial Catalog=NX_GROUP;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="heroesAsyncConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\SQLEXPRESS;Initial Catalog=heroes;Integrated Security=True;TimeOut=60;Asynchronous Processing=True;MultipleActiveResultSets=True&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.\SQLEXPRESS;Initial Catalog=heroes;Integrated Security=True;TimeOut=60;Asynchronous Processing=True;MultipleActiveResultSets=True</Value>
+    </Setting>
+    <Setting Name="HeroesExceptConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\sqlexpress;Initial Catalog=heroesExcept;Integrated Security=True&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.\sqlexpress;Initial Catalog=heroesExcept;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="HeroesWebStatConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\sqlexpress;Initial Catalog=HeroesWebStat;Integrated Security=True&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.\sqlexpress;Initial Catalog=HeroesWebStat;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="FraudDetectConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\sqlexpress;Initial Catalog=FraudDetect;Integrated Security=True&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.\sqlexpress;Initial Catalog=FraudDetect;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="heroesGuildConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=127.0.0.1,1433;User Id=sa;Password=PASWORD;Initial Catalog=heroesLog&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=127.0.0.1,1433;User Id=sa;Password=PASWORD;Initial Catalog=heroesLog</Value>
+    </Setting>
+    <Setting Name="NX_GuildMasterConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=127.0.0.1,1433;User Id=sa;Password=PASWORD;Initial Catalog=heroes&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=127.0.0.1,1433;User Id=sa;Password=PASWORD;Initial Catalog=heroes</Value>
+    </Setting>
+    <Setting Name="HeroesTradeNewConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=127.0.0.1,1433;User Id=sa;Password=PASWORD;Initial Catalog=heroesMarketPlace&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=127.0.0.1,1433;User Id=sa;Password=PASWORD;Initial Catalog=heroesMarketPlace</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

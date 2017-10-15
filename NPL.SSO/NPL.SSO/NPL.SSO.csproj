@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F18CC55-4ABD-4966-B208-CB8DA3D4623E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NPL.SSO</RootNamespace>
+    <AssemblyName>NPL.SSO</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\..\..\en-eu-x-gm\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authenticator.cs" />
+    <Compile Include="com\nexon\auth\AttachSessionCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\AttachSessionCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\AttachSessionResult.cs" />
+    <Compile Include="com\nexon\auth\AuthorizedLogin64CompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\AuthorizedLogin64CompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\AuthorizedLoginResult64.cs" />
+    <Compile Include="com\nexon\auth\BanCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\BanCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\BanResult.cs" />
+    <Compile Include="com\nexon\auth\ChannelingLoginCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\ChannelingLoginCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\ChannelingLoginResult.cs" />
+    <Compile Include="com\nexon\auth\CheckAndAttachSessionCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\CheckAndAttachSessionCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\CheckAndAttachSessionResult.cs" />
+    <Compile Include="com\nexon\auth\CheckIDnPasswordCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\CheckIDnPasswordCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\CheckIDnPasswordResult.cs" />
+    <Compile Include="com\nexon\auth\CheckSession2CompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\CheckSession2CompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\CheckSession2Result.cs" />
+    <Compile Include="com\nexon\auth\CheckSessionAndGetInfo2CompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\CheckSessionAndGetInfo2CompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\CheckSessionAndGetInfo2Result.cs" />
+    <Compile Include="com\nexon\auth\CheckSessionAndGetInfo3CompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\CheckSessionAndGetInfo3CompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\CheckSessionAndGetInfo3Result.cs" />
+    <Compile Include="com\nexon\auth\CheckSessionAndGetInfo4CompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\CheckSessionAndGetInfo4CompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\CheckSessionAndGetInfo4Result.cs" />
+    <Compile Include="com\nexon\auth\CheckSessionAndGetInfoCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\CheckSessionAndGetInfoCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\CheckSessionAndGetInfoResult.cs" />
+    <Compile Include="com\nexon\auth\CheckSessionAndUpdateInfoCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\CheckSessionAndUpdateInfoCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\CheckSessionCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\CheckSessionCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\CheckSessionResult.cs" />
+    <Compile Include="com\nexon\auth\Default.cs" />
+    <Compile Include="com\nexon\auth\DualTestCheckSessionCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\DualTestCheckSessionCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\DualTestLoginCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\DualTestLoginCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\DualTestLogoutCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\DualTestLogoutCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\GetOldFashionInfoCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\GetOldFashionInfoCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\GetOldFashionInfoResult.cs" />
+    <Compile Include="com\nexon\auth\IsLoginCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\IsLoginCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\IsLoginResult.cs" />
+    <Compile Include="com\nexon\auth\IsOTPUsable64CompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\IsOTPUsable64CompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\IsOTPUsableCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\IsOTPUsableCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\IsOTPUsableResult.cs" />
+    <Compile Include="com\nexon\auth\Login2CompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\Login2CompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\Login3CompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\Login3CompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\Login4CompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\Login4CompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\LoginCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\LoginCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\LoginResult.cs" />
+    <Compile Include="com\nexon\auth\LoginResult2.cs" />
+    <Compile Include="com\nexon\auth\LogoutCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\LogoutCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\LogoutResult.cs" />
+    <Compile Include="com\nexon\auth\MobileLoginCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\MobileLoginCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\MobileLoginResult.cs" />
+    <Compile Include="com\nexon\auth\PCBangLoginCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\PCBangLoginCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\PCBangLoginResult.cs" />
+    <Compile Include="com\nexon\auth\UpdateInfo64CompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\UpdateInfo64CompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\UpdateInfoCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\UpdateInfoCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\UpdateInfoResult.cs" />
+    <Compile Include="com\nexon\auth\UpdateSessionCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\UpdateSessionCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\UpdateSessionResult.cs" />
+    <Compile Include="com\nexon\auth\UpgradeGameTokenCompletedEventArgs.cs" />
+    <Compile Include="com\nexon\auth\UpgradeGameTokenCompletedEventHandler.cs" />
+    <Compile Include="com\nexon\auth\UpgradeGameTokenResult.cs" />
+    <Compile Include="Configuration\AuthenticatorSection.cs" />
+    <Compile Include="Configuration\Config.cs" />
+    <Compile Include="ErrorCode.cs" />
+    <Compile Include="ErrorLogDAO.cs" />
+    <Compile Include="ErrorLogger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SecureLoginType.cs" />
+    <Compile Include="UpdateInfoType.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

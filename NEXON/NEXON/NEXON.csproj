@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E0018812-C2F5-40ED-A5AA-222040983F16}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NEXON</RootNamespace>
+    <AssemblyName>NEXON</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\..\..\en-eu-x-gm\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AhnLab\HackShield\AntiCpXSvr.cs" />
+    <Compile Include="Nexon\CafeAuthJPN\AccountDesc.cs" />
+    <Compile Include="Nexon\CafeAuthJPN\AddressDesc.cs" />
+    <Compile Include="Nexon\CafeAuthJPN\AsyncResult.cs" />
+    <Compile Include="Nexon\CafeAuthJPN\Connection.cs" />
+    <Compile Include="Nexon\CafeAuthJPN\Extention.cs" />
+    <Compile Include="Nexon\CafeAuthJPN\GameSN.cs" />
+    <Compile Include="Nexon\CafeAuthJPN\MachineID.cs" />
+    <Compile Include="Nexon\CafeAuthJPN\Option.cs" />
+    <Compile Include="Nexon\CafeAuthJPN\Packet.cs" />
+    <Compile Include="Nexon\CafeAuthJPN\PacketAnalyzer.cs" />
+    <Compile Include="Nexon\CafeAuthJPN\Packets\Alive.cs" />
+    <Compile Include="Nexon\CafeAuthJPN\Packets\Initialize.cs" />
+    <Compile Include="Nexon\CafeAuthJPN\Packets\Login.cs" />
+    <Compile Include="Nexon\CafeAuthJPN\Packets\LoginResponse.cs" />
+    <Compile Include="Nexon\CafeAuthJPN\Packets\Logout.cs" />
+    <Compile Include="Nexon\CafeAuthJPN\PacketType.cs" />
+    <Compile Include="Nexon\CafeAuthJPN\Result.cs" />
+    <Compile Include="Nexon\CafeAuthOld\AccountDesc.cs" />
+    <Compile Include="Nexon\CafeAuthOld\AddressDesc.cs" />
+    <Compile Include="Nexon\CafeAuthOld\AsyncResult.cs" />
+    <Compile Include="Nexon\CafeAuthOld\Connection.cs" />
+    <Compile Include="Nexon\CafeAuthOld\Extention.cs" />
+    <Compile Include="Nexon\CafeAuthOld\GameSN.cs" />
+    <Compile Include="Nexon\CafeAuthOld\MachineID.cs" />
+    <Compile Include="Nexon\CafeAuthOld\Option.cs" />
+    <Compile Include="Nexon\CafeAuthOld\Packet.cs" />
+    <Compile Include="Nexon\CafeAuthOld\PacketAnalyzer.cs" />
+    <Compile Include="Nexon\CafeAuthOld\Packets\Alive.cs" />
+    <Compile Include="Nexon\CafeAuthOld\Packets\Initialize.cs" />
+    <Compile Include="Nexon\CafeAuthOld\Packets\Login.cs" />
+    <Compile Include="Nexon\CafeAuthOld\Packets\LoginChinese.cs" />
+    <Compile Include="Nexon\CafeAuthOld\Packets\LoginResponse.cs" />
+    <Compile Include="Nexon\CafeAuthOld\Packets\Logout.cs" />
+    <Compile Include="Nexon\CafeAuthOld\PacketType.cs" />
+    <Compile Include="Nexon\CafeAuthOld\Result.cs" />
+    <Compile Include="Nexon\CafeAuth\AccountDesc.cs" />
+    <Compile Include="Nexon\CafeAuth\AddressDesc.cs" />
+    <Compile Include="Nexon\CafeAuth\AsyncResult.cs" />
+    <Compile Include="Nexon\CafeAuth\AuthorizeResult.cs" />
+    <Compile Include="Nexon\CafeAuth\Connection.cs" />
+    <Compile Include="Nexon\CafeAuth\Extention.cs" />
+    <Compile Include="Nexon\CafeAuth\GameSN.cs" />
+    <Compile Include="Nexon\CafeAuth\InitializeResult.cs" />
+    <Compile Include="Nexon\CafeAuth\MachineID.cs" />
+    <Compile Include="Nexon\CafeAuth\Option.cs" />
+    <Compile Include="Nexon\CafeAuth\Packet.cs" />
+    <Compile Include="Nexon\CafeAuth\PacketAnalyzer.cs" />
+    <Compile Include="Nexon\CafeAuth\Packets\Alive.cs" />
+    <Compile Include="Nexon\CafeAuth\Packets\ExtendInformation.cs" />
+    <Compile Include="Nexon\CafeAuth\Packets\Extention.cs" />
+    <Compile Include="Nexon\CafeAuth\Packets\Initialize.cs" />
+    <Compile Include="Nexon\CafeAuth\Packets\InitializeResponse.cs" />
+    <Compile Include="Nexon\CafeAuth\Packets\Login.cs" />
+    <Compile Include="Nexon\CafeAuth\Packets\LoginResponse.cs" />
+    <Compile Include="Nexon\CafeAuth\Packets\Logout.cs" />
+    <Compile Include="Nexon\CafeAuth\Packets\MessageRequest.cs" />
+    <Compile Include="Nexon\CafeAuth\Packets\PolicyInfoErrorCode.cs" />
+    <Compile Include="Nexon\CafeAuth\Packets\SynchronizeRequest.cs" />
+    <Compile Include="Nexon\CafeAuth\Packets\SynchronizeResult.cs" />
+    <Compile Include="Nexon\CafeAuth\Packets\TerminateRequest.cs" />
+    <Compile Include="Nexon\CafeAuth\PacketType.cs" />
+    <Compile Include="Nexon\Nisms\AsyncResult.cs" />
+    <Compile Include="Nexon\Nisms\BonusProduct.cs" />
+    <Compile Include="Nexon\Nisms\Category.cs" />
+    <Compile Include="Nexon\Nisms\Connection.cs" />
+    <Compile Include="Nexon\Nisms\Extention.cs" />
+    <Compile Include="Nexon\Nisms\Lottery.cs" />
+    <Compile Include="Nexon\Nisms\Order.cs" />
+    <Compile Include="Nexon\Nisms\Package.cs" />
+    <Compile Include="Nexon\Nisms\Packet.cs" />
+    <Compile Include="Nexon\Nisms\PacketAnalyzer.cs" />
+    <Compile Include="Nexon\Nisms\Packets\CategoryInquiryRequest.cs" />
+    <Compile Include="Nexon\Nisms\Packets\CategoryInquiryResponse.cs" />
+    <Compile Include="Nexon\Nisms\Packets\CheckBalanceEXRequest.cs" />
+    <Compile Include="Nexon\Nisms\Packets\CheckBalanceEXResponse.cs" />
+    <Compile Include="Nexon\Nisms\Packets\CheckBalanceRequest.cs" />
+    <Compile Include="Nexon\Nisms\Packets\CheckBalanceResponse.cs" />
+    <Compile Include="Nexon\Nisms\Packets\HeartBeatRequest.cs" />
+    <Compile Include="Nexon\Nisms\Packets\HeartBeatResponse.cs" />
+    <Compile Include="Nexon\Nisms\Packets\InitializeRequest.cs" />
+    <Compile Include="Nexon\Nisms\Packets\InitializeResponse.cs" />
+    <Compile Include="Nexon\Nisms\Packets\InventoryClearRequest.cs" />
+    <Compile Include="Nexon\Nisms\Packets\InventoryClearResponse.cs" />
+    <Compile Include="Nexon\Nisms\Packets\InventoryInquiryReadRequest.cs" />
+    <Compile Include="Nexon\Nisms\Packets\InventoryInquiryReadResponse.cs" />
+    <Compile Include="Nexon\Nisms\Packets\InventoryInquiryRequest.cs" />
+    <Compile Include="Nexon\Nisms\Packets\InventoryInquiryResponse.cs" />
+    <Compile Include="Nexon\Nisms\Packets\InventoryPickupOnceRequest.cs" />
+    <Compile Include="Nexon\Nisms\Packets\InventoryPickupOnceResponse.cs" />
+    <Compile Include="Nexon\Nisms\Packets\InventoryPickupRequest.cs" />
+    <Compile Include="Nexon\Nisms\Packets\InventoryPickupResponse.cs" />
+    <Compile Include="Nexon\Nisms\Packets\InventoryPickupRollbackRequest.cs" />
+    <Compile Include="Nexon\Nisms\Packets\InventoryPickupRollbackResponse.cs" />
+    <Compile Include="Nexon\Nisms\Packets\ProductInquiryRequest.cs" />
+    <Compile Include="Nexon\Nisms\Packets\ProductInquiryResponse.cs" />
+    <Compile Include="Nexon\Nisms\Packets\PurchaseGiftAttributeRequest.cs" />
+    <Compile Include="Nexon\Nisms\Packets\PurchaseGiftAttributeResponse.cs" />
+    <Compile Include="Nexon\Nisms\Packets\PurchaseItemAttributeRequest.cs" />
+    <Compile Include="Nexon\Nisms\Packets\PurchaseItemAttributeResponse.cs" />
+    <Compile Include="Nexon\Nisms\Packets\PurchaseItemEXRequest.cs" />
+    <Compile Include="Nexon\Nisms\Packets\PurchaseItemEXResponse.cs" />
+    <Compile Include="Nexon\Nisms\Packets\PurchaseItemRefundRequest.cs" />
+    <Compile Include="Nexon\Nisms\Packets\PurchaseItemRefundResponse.cs" />
+    <Compile Include="Nexon\Nisms\Packets\PurchaseItemResponse.cs" />
+    <Compile Include="Nexon\Nisms\PacketType.cs" />
+    <Compile Include="Nexon\Nisms\PaymentRule.cs" />
+    <Compile Include="Nexon\Nisms\PaymentType.cs" />
+    <Compile Include="Nexon\Nisms\Product.cs" />
+    <Compile Include="Nexon\Nisms\ProductKind.cs" />
+    <Compile Include="Nexon\Nisms\ProductStatus.cs" />
+    <Compile Include="Nexon\Nisms\Reason.cs" />
+    <Compile Include="Nexon\Nisms\Result.cs" />
+    <Compile Include="Nexon\Nisms\ShowInventory.cs" />
+    <Compile Include="Nexon\Nisms\SubProduct.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Core\Core.csproj">
+      <Project>{ef967304-f220-4581-b149-1d46a3fe2527}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\log4net\log4net\log4net.csproj">
+      <Project>{181fe707-e161-4722-9f38-6aaab6faa106}</Project>
+      <Name>log4net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\Utility\Utility.csproj">
+      <Project>{9b72c18e-20a4-4a3e-bcb6-f2eeef062b5f}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C9E21593-9A6A-45C5-B14C-BB4313168AB6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HeroesOpTool</RootNamespace>
+    <AssemblyName>HeroesOpTool</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>HeroesOpTool.ico</ApplicationIcon>
+    <StartupObject>HeroesOpTool.HeroesOpTool</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\..\..\HeroesOpTool\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="AxInterop.SHDocVw">
+      <HintPath>..\..\..\..\HeroesOpTool\AxInterop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChildProcessLogGeneratorCollection.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="ControlExtension.cs" />
+    <Compile Include="ExeInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExeInfoForm.Designer.cs">
+      <DependentUpon>ExeInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpViewer.Designer.cs">
+      <DependentUpon>HelpViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeroesOpTool.cs" />
+    <Compile Include="InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputBox.Designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalizeText.cs" />
+    <Compile Include="LogGenerator.cs" />
+    <Compile Include="LogTextBox.Designer.cs">
+      <DependentUpon>LogTextBox.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LogViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogViewForm.Designer.cs">
+      <DependentUpon>LogViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MethodInvoker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RCUser\GeneralManage\AuthUserManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCUser\GeneralManage\AuthUserManage.Designer.cs">
+      <DependentUpon>AuthUserManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCUser\GeneralManage\PersonalInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCUser\GeneralManage\PersonalInfo.Designer.cs">
+      <DependentUpon>PersonalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCUser\GeneralManage\UserView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCUser\GeneralManage\UserView.Designer.cs">
+      <DependentUpon>UserView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCUser\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCUser\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCUser\Member.cs" />
+    <Compile Include="RCUser\RCUserHandler.cs" />
+    <Compile Include="RCUser\ServerMonitorSystem\CheckState.cs" />
+    <Compile Include="RCUser\ServerMonitorSystem\ChildProcessListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\ChildProcessListForm.Designer.cs">
+      <DependentUpon>ChildProcessListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\ClientProcessItem.cs" />
+    <Compile Include="RCUser\ServerMonitorSystem\CommandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\CommandForm.Designer.cs">
+      <DependentUpon>CommandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\PriorityComparer.cs" />
+    <Compile Include="RCUser\ServerMonitorSystem\ProcessLogGeneratorCollection.cs" />
+    <Compile Include="RCUser\ServerMonitorSystem\ServerCommandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\ServerCommandForm.Designer.cs">
+      <DependentUpon>ServerCommandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\ServerCommandSchedule.Designer.cs">
+      <DependentUpon>ServerCommandSchedule.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\ServerMonitorControl.Designer.cs">
+      <DependentUpon>ServerMonitorControl.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\SortType.cs" />
+    <Compile Include="RCUser\ServerMonitorSystem\StdinCommandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\StdinCommandForm.Designer.cs">
+      <DependentUpon>StdinCommandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\SystemManage\CustomCommandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\SystemManage\CustomCommandForm.Designer.cs">
+      <DependentUpon>CustomCommandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\SystemManage\ProcessPropertyDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\SystemManage\ProcessPropertyDetailForm.Designer.cs">
+      <DependentUpon>ProcessPropertyDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\SystemManage\ProcessPropertyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\SystemManage\ProcessPropertyForm.Designer.cs">
+      <DependentUpon>ProcessPropertyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\SystemManage\ProcessTemplateControl.Designer.cs">
+      <DependentUpon>ProcessTemplateControl.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\SystemManage\RCClientControl.Designer.cs">
+      <DependentUpon>RCClientControl.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\SystemManage\RemoteControlSystemManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\SystemManage\RemoteControlSystemManager.Designer.cs">
+      <DependentUpon>RemoteControlSystemManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\SystemManage\SchedulerSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\SystemManage\SchedulerSettingForm.Designer.cs">
+      <DependentUpon>SchedulerSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\SystemManage\SelfUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\SystemManage\SelfUpdateForm.Designer.cs">
+      <DependentUpon>SelfUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\SystemManage\ServerGroupControl.Designer.cs">
+      <DependentUpon>ServerGroupControl.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\SystemManage\TwoStringInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\SystemManage\TwoStringInputForm.Designer.cs">
+      <DependentUpon>TwoStringInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\SystemManage\WorkGroupControl.Designer.cs">
+      <DependentUpon>WorkGroupControl.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\TwoRadioButton.Designer.cs">
+      <DependentUpon>TwoRadioButton.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="RCUser\ServerMonitorSystem\WorkGroup.2.cs" />
+    <Compile Include="RCUser\ServerMonitorSystem\WorkGroup.cs" />
+    <Compile Include="RCUser\ServerMonitorSystem\WorkGroupSort.cs" />
+    <Compile Include="RCUser\ServerMonitorSystem\WorkGroupTreeNode.cs" />
+    <Compile Include="ServerMonitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerMonitorForm.Designer.cs">
+      <DependentUpon>ServerMonitorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMonitorForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMonitorForm2.Designer.cs">
+      <DependentUpon>UserMonitorForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMonitorSystem\UserAlarmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMonitorSystem\UserAlarmForm.Designer.cs">
+      <DependentUpon>UserAlarmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMonitorSystem\UserCountData.cs" />
+    <Compile Include="UserMonitorSystem\UserCountGraph.Designer.cs">
+      <DependentUpon>UserCountGraph.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UserMonitorSystem\UserCountGrid.Designer.cs">
+      <DependentUpon>UserCountGrid.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UserMonitorSystem\UserDropEventArgs.cs" />
+    <Compile Include="UserMonitorSystem\UserDropEventHandler.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExeInfoForm.resx">
+      <DependentUpon>ExeInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpViewer.resx">
+      <DependentUpon>HelpViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogTextBox.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LogTextBox.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogViewForm.resx">
+      <DependentUpon>LogViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\GeneralManage\AuthUserManage.resx">
+      <DependentUpon>AuthUserManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\GeneralManage\PersonalInfo.resx">
+      <DependentUpon>PersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\GeneralManage\UserView.resx">
+      <DependentUpon>UserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\ServerMonitorSystem\ChildProcessListForm.resx">
+      <DependentUpon>ChildProcessListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\ServerMonitorSystem\CommandForm.resx">
+      <DependentUpon>CommandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\ServerMonitorSystem\ServerCommandForm.resx">
+      <DependentUpon>ServerCommandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\ServerMonitorSystem\ServerCommandSchedule.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ServerCommandSchedule.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\ServerMonitorSystem\ServerMonitorControl.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ServerMonitorControl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\ServerMonitorSystem\StdinCommandForm.resx">
+      <DependentUpon>StdinCommandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\ServerMonitorSystem\SystemManage\CustomCommandForm.resx">
+      <DependentUpon>CustomCommandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\ServerMonitorSystem\SystemManage\ProcessPropertyDetailForm.resx">
+      <DependentUpon>ProcessPropertyDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\ServerMonitorSystem\SystemManage\ProcessPropertyForm.resx">
+      <DependentUpon>ProcessPropertyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\ServerMonitorSystem\SystemManage\ProcessTemplateControl.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProcessTemplateControl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\ServerMonitorSystem\SystemManage\RCClientControl.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>RCClientControl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\ServerMonitorSystem\SystemManage\RemoteControlSystemManager.resx">
+      <DependentUpon>RemoteControlSystemManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\ServerMonitorSystem\SystemManage\SchedulerSettingForm.resx">
+      <DependentUpon>SchedulerSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\ServerMonitorSystem\SystemManage\SelfUpdateForm.resx">
+      <DependentUpon>SelfUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\ServerMonitorSystem\SystemManage\ServerGroupControl.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ServerGroupControl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\ServerMonitorSystem\SystemManage\TwoStringInputForm.resx">
+      <DependentUpon>TwoStringInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\ServerMonitorSystem\SystemManage\WorkGroupControl.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>WorkGroupControl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RCUser\ServerMonitorSystem\TwoRadioButton.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TwoRadioButton.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerMonitorForm.resx">
+      <DependentUpon>ServerMonitorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMonitorForm2.resx">
+      <DependentUpon>UserMonitorForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMonitorSystem\UserAlarmForm.resx">
+      <DependentUpon>UserAlarmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMonitorSystem\UserCountGraph.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UserCountGraph.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMonitorSystem\UserCountGrid.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UserCountGrid.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Core\Core.csproj">
+      <Project>{ef967304-f220-4581-b149-1d46a3fe2527}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\log4net\log4net\log4net.csproj">
+      <Project>{181fe707-e161-4722-9f38-6aaab6faa106}</Project>
+      <Name>log4net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NPlot\NPlot\NPlot.csproj">
+      <Project>{3a946e29-51ab-466a-b7a5-36c2a59b92ca}</Project>
+      <Name>NPlot</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RCCommon\RCCommon\RCCommon.csproj">
+      <Project>{592aeb18-9bfa-42be-a4fd-0b9633fcffee}</Project>
+      <Name>RCCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

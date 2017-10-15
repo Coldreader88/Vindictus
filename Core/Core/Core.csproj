@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF967304-F220-4581-B149-1D46A3FE2527}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Devcat.Core</RootNamespace>
+    <AssemblyName>Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\..\..\en-eu-x-gm\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>CS0420</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <NoWarn>CS0420</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.VisualBasic" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AggregateException.cs" />
+    <Compile Include="Collections\Comparison.cs" />
+    <Compile Include="Collections\Concurrent\BlockingCollection.cs" />
+    <Compile Include="Collections\Concurrent\ConcurrentDictionary.cs" />
+    <Compile Include="Collections\Concurrent\ConcurrentQueue.cs" />
+    <Compile Include="Collections\Concurrent\ConcurrentStack.cs" />
+    <Compile Include="Collections\Concurrent\IProducerConsumerCollection.cs" />
+    <Compile Include="Collections\Concurrent\OrderablePartitioner.cs" />
+    <Compile Include="Collections\Concurrent\Partitioner.2.cs" />
+    <Compile Include="Collections\Concurrent\Partitioner.cs" />
+    <Compile Include="Collections\Concurrent\SystemCollectionsConcurrent_ProducerConsumerCollectionDebugView.cs" />
+    <Compile Include="Collections\Concurrent\SystemThreadingCollections_BlockingCollectionDebugView.cs" />
+    <Compile Include="Collections\Concurrent\SystemThreadingCollection_IProducerConsumerCollectionDebugView.cs" />
+    <Compile Include="Collections\DelayedWriteMap.cs" />
+    <Compile Include="Collections\Generic\Mscorlib_DictionaryDebugView.cs" />
+    <Compile Include="Collections\IComparer.cs" />
+    <Compile Include="Collections\ListExtensions.cs" />
+    <Compile Include="Collections\PriorityQueue.cs" />
+    <Compile Include="Collections\PriorityQueueElement.cs" />
+    <Compile Include="Collections\SingleFreeQueue.cs" />
+    <Compile Include="Collections\SingleFreeQueue2.cs" />
+    <Compile Include="Collections\SingleFreeQueue3.cs" />
+    <Compile Include="Collections\SingleFreeQueue4.cs" />
+    <Compile Include="Collections\SortedSet.cs" />
+    <Compile Include="Collections\TreeRotation.cs" />
+    <Compile Include="Collections\TreeSet.cs" />
+    <Compile Include="Collections\TreeWalkAction.cs" />
+    <Compile Include="Collections\WriteFreeQueue.cs" />
+    <Compile Include="Collections\WriteFreeQueue2.cs" />
+    <Compile Include="Collections\WriteFreeQueue3.cs" />
+    <Compile Include="ComponentizedAppCommandDelegate.cs" />
+    <Compile Include="ComponentizedAppCommunicator.cs" />
+    <Compile Include="ComponentizedAppEntryDelegate.cs" />
+    <Compile Include="ComponentizedApplication.cs" />
+    <Compile Include="Data\SqlClient\SqlColumnSizeAttribute.cs" />
+    <Compile Include="Data\SqlClient\SqlProcedureAttribute.cs" />
+    <Compile Include="Data\SqlClient\SqlProcedureGenerator.cs" />
+    <Compile Include="Data\SqlClient\SqlProcedureLinker.cs" />
+    <Compile Include="Data\SqlClient\SqlQueryResult.cs" />
+    <Compile Include="Data\SqlClient\SqlReturnAttribute.cs" />
+    <Compile Include="Data\SqlClient\SqlScript.cs" />
+    <Compile Include="Design\FieldPropertyDescriptor.cs" />
+    <Compile Include="Design\MathTypeConverter.cs" />
+    <Compile Include="Design\MatrixConverter.cs" />
+    <Compile Include="Design\MemberPropertyDescriptor.cs" />
+    <Compile Include="Design\QuaternionConverter.cs" />
+    <Compile Include="Design\Vector2Converter.cs" />
+    <Compile Include="Design\Vector3Converter.cs" />
+    <Compile Include="Diagnostics\AssumptionErrorException.cs" />
+    <Compile Include="Diagnostics\Contracts\Contract.cs" />
+    <Compile Include="Diagnostics\ThreadConstraint.cs" />
+    <Compile Include="Environment2.cs" />
+    <Compile Include="EventArgs.cs" />
+    <Compile Include="EventHandler.cs" />
+    <Compile Include="ExceptionHandler\My\MyApplication.cs" />
+    <Compile Include="ExceptionHandler\My\MyComputer.cs" />
+    <Compile Include="ExceptionHandler\My\MyProject.cs" />
+    <Compile Include="ExceptionHandler\My\MySettings.Designer.cs">
+      <DependentUpon>MySettings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ExceptionHandler\My\MySettingsProperty.cs" />
+    <Compile Include="ExceptionHandler\My\Resources\Devcat.Core.ExceptionHandler.Resources.Designer.cs">
+      <DependentUpon>Devcat.Core.ExceptionHandler.Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ExceptionHandler\Util.cs" />
+    <Compile Include="Func.cs" />
+    <Compile Include="Lazy.cs" />
+    <Compile Include="Math\BitOperation.cs" />
+    <Compile Include="Math\GeometricAlgebra\Matrix.cs" />
+    <Compile Include="Math\GeometricAlgebra\Quaternion.cs" />
+    <Compile Include="Math\GeometricAlgebra\Vector2.cs" />
+    <Compile Include="Math\GeometricAlgebra\Vector3.cs" />
+    <Compile Include="Math\MathHelper.cs" />
+    <Compile Include="Memory\ChunkSegment.cs" />
+    <Compile Include="Memory\FlexibleBuffer.cs" />
+    <Compile Include="Memory\PureAllocator.cs" />
+    <Compile Include="Memory\ThreadStatic.cs" />
+    <Compile Include="Memory\UnmanagedAllocator.cs" />
+    <Compile Include="Memory\UnmanagedBuffer.cs" />
+    <Compile Include="Net\AcceptEventArgs.cs" />
+    <Compile Include="Net\AsyncSocket2.cs" />
+    <Compile Include="Net\AsyncTcpWorker.cs" />
+    <Compile Include="Net\IAsyncSocket.cs" />
+    <Compile Include="Net\ICryptoTransform.cs" />
+    <Compile Include="Net\IPacket.cs" />
+    <Compile Include="Net\IPacketAnalyzer.cs" />
+    <Compile Include="Net\IPacketTransmitter.cs" />
+    <Compile Include="Net\ITcpServer.cs" />
+    <Compile Include="Net\ITransmitter.cs" />
+    <Compile Include="Net\Message\ClassInfo.cs" />
+    <Compile Include="Net\Message\Constants.cs" />
+    <Compile Include="Net\Message\CryptoTransform.cs" />
+    <Compile Include="Net\Message\CustomTypeInitializer.cs" />
+    <Compile Include="Net\Message\Extension.cs" />
+    <Compile Include="Net\Message\ICustomSerializable.cs" />
+    <Compile Include="Net\Message\ICustomSerializableContainer.cs" />
+    <Compile Include="Net\Message\Isaac.cs" />
+    <Compile Include="Net\Message\MEMORYSTATUSEX.cs" />
+    <Compile Include="Net\Message\MessageAnalyzer.cs" />
+    <Compile Include="Net\Message\MessageHandlerFactory.cs" />
+    <Compile Include="Net\Message\MessageSerializer.cs" />
+    <Compile Include="Net\Message\Packet.cs" />
+    <Compile Include="Net\Message\SelfTest.cs" />
+    <Compile Include="Net\Message\SerializedSizeCalculator.cs" />
+    <Compile Include="Net\Message\SerializedSizeCalculatorHelper.cs" />
+    <Compile Include="Net\Message\SerializeReader.cs" />
+    <Compile Include="Net\Message\SerializeReaderHelper.cs" />
+    <Compile Include="Net\Message\SerializeWriter.cs" />
+    <Compile Include="Net\Message\SerializeWriterHelper.cs" />
+    <Compile Include="Net\Message\SizeConverter.cs" />
+    <Compile Include="Net\ServerBindType.cs" />
+    <Compile Include="Net\TcpClient.cs" />
+    <Compile Include="Net\TcpClient2.cs" />
+    <Compile Include="Net\TcpServer.cs" />
+    <Compile Include="Net\TcpServer2.cs" />
+    <Compile Include="Net\TcpServerBase.cs" />
+    <Compile Include="Net\Transport\EnumerablePacketFlagModifier.cs" />
+    <Compile Include="Net\Transport\InnerServer.cs" />
+    <Compile Include="Net\Transport\ISensorAdapter.cs" />
+    <Compile Include="Net\Transport\ISubstanceAdapter.cs" />
+    <Compile Include="Net\Transport\OuterClient.cs" />
+    <Compile Include="Net\Transport\Sensor.cs" />
+    <Compile Include="Net\Transport\Station.cs" />
+    <Compile Include="Net\Transport\Substance.cs" />
+    <Compile Include="Net\Transport\SubstanceListElement.cs" />
+    <Compile Include="Net\Transport\Transrouter.cs" />
+    <Compile Include="Net\Transport\TransrouterMessage.cs" />
+    <Compile Include="Net\Transport\VirtualClient.cs" />
+    <Compile Include="Net\Transport\VirtualClientGroup.cs" />
+    <Compile Include="Net\Transport\VirtualPacketFlag.cs" />
+    <Compile Include="Net\Transport\VirtualSensor.cs" />
+    <Compile Include="Net\Transport\VirtualSensorGroup.cs" />
+    <Compile Include="Net\Transport\VirtualServer.cs" />
+    <Compile Include="OperationCanceledException2.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reflection\Serializer.cs" />
+    <Compile Include="SecuritySafeCriticalAttribute.cs" />
+    <Compile Include="System_LazyDebugView.cs" />
+    <Compile Include="Testing\Assert.cs" />
+    <Compile Include="Testing\AssertFailedException.cs" />
+    <Compile Include="Testing\AssertInconclusiveException.cs" />
+    <Compile Include="Testing\AutomatedTestAttribute.cs" />
+    <Compile Include="Testing\TestFailedException.cs" />
+    <Compile Include="Testing\TimeLimitAttribute.cs" />
+    <Compile Include="Threading\Action.cs" />
+    <Compile Include="Threading\BalancedThread.cs" />
+    <Compile Include="Threading\Barrier.cs" />
+    <Compile Include="Threading\BarrierPostPhaseException.cs" />
+    <Compile Include="Threading\CancellationCallbackCoreWorkArguments.cs" />
+    <Compile Include="Threading\CancellationCallbackInfo.cs" />
+    <Compile Include="Threading\CancellationToken.cs" />
+    <Compile Include="Threading\CancellationTokenRegistration.cs" />
+    <Compile Include="Threading\CancellationTokenSource.cs" />
+    <Compile Include="Threading\IJob.cs" />
+    <Compile Include="Threading\Job.cs" />
+    <Compile Include="Threading\JobProcessor.cs" />
+    <Compile Include="Threading\LazyInitializer.cs" />
+    <Compile Include="Threading\LoadBalancer.cs" />
+    <Compile Include="Threading\LoadFragment.cs" />
+    <Compile Include="Threading\LoadFragmentManager.cs" />
+    <Compile Include="Threading\Monitor2.cs" />
+    <Compile Include="Threading\Platform.cs" />
+    <Compile Include="Threading\PlatformHelper.cs" />
+    <Compile Include="Threading\Profiler\AverageProfilePolicy.cs" />
+    <Compile Include="Threading\Profiler\IProfilePolicy.cs" />
+    <Compile Include="Threading\Profiler\JobProfileElement.cs" />
+    <Compile Include="Threading\Profiler\JobProfiler.cs" />
+    <Compile Include="Threading\Profiler\ProfileIndex.cs" />
+    <Compile Include="Threading\Scheduler.cs" />
+    <Compile Include="Threading\SemaphoreSlim.cs" />
+    <Compile Include="Threading\SparselyPopulatedArray.cs" />
+    <Compile Include="Threading\SparselyPopulatedArrayAddInfo.cs" />
+    <Compile Include="Threading\SparselyPopulatedArrayFragment.cs" />
+    <Compile Include="Threading\StackCrawlMark2.cs" />
+    <Compile Include="Threading\ThreadLoad.cs" />
+    <Compile Include="Threading\TlsInt32IDGenerator.cs" />
+    <Compile Include="Threading\TlsInt64IDGenerator.cs" />
+    <Compile Include="ValueChangedEventArgs.cs" />
+    <Compile Include="WinNative\IO.cs" />
+    <Compile Include="WinNative\Net.cs" />
+    <Compile Include="WinNative\Thread.cs" />
+    <Compile Include="XmlSerializer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ExceptionHandler\My\Resources\Devcat.Core.ExceptionHandler.Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Devcat.Core.ExceptionHandler.Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExceptionHandler\My\MySettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MySettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)$(TargetName)$(TargetExt)" "$(TargetDir)..\..\RCServer\" /Y
+xcopy "$(TargetDir)$(TargetName)$(TargetExt)" "$(TargetDir)..\..\RCClient\" /Y
+xcopy "$(TargetDir)$(TargetName)$(TargetExt)" "$(TargetDir)..\..\HeroesCommandClient\" /Y
+xcopy "$(TargetDir)$(TargetName)$(TargetExt)" "$(TargetDir)..\..\HeroesOpTool\" /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

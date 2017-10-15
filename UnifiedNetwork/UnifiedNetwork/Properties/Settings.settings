@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile CurrentProfile="(Default)" GeneratedClassNamespace="UnifiedNetwork.Properties" GeneratedClassName="Settings" xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ReportServiceListenPort" Type="System.UInt16" Scope="Application">
+      <Value Profile="(Default)">27020</Value>
+    </Setting>
+    <Setting Name="LocationPortMin" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">14400</Value>
+    </Setting>
+    <Setting Name="GameCode" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">126991</Value>
+    </Setting>
+    <Setting Name="ServerCode" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="PrintPerformanceInfo" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

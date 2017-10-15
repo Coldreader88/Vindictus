@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5BAA76A-C33C-401B-A1C8-8E6A09A9E0EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nexon.Com</RootNamespace>
+    <AssemblyName>Nexon.Com</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\..\..\en-eu-x-gm\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\AsyncSPParam.cs" />
+    <Compile Include="DAO\AsyncSPResultBase.cs" />
+    <Compile Include="DAO\AsyncSPWrapperBase.cs" />
+    <Compile Include="DAO\DAOBase.cs" />
+    <Compile Include="DAO\GenerateDataEntityExecption.cs" />
+    <Compile Include="DAO\ISQLConnectionStringProvider.cs" />
+    <Compile Include="DAO\ISQLConnectionStringsProvider.cs" />
+    <Compile Include="DAO\IWebServiceURLProvider.cs" />
+    <Compile Include="DAO\SoapResultBase.cs" />
+    <Compile Include="DAO\SoapTimeoutException.cs" />
+    <Compile Include="DAO\SoapWrapperBase.cs" />
+    <Compile Include="DAO\SPFatalException.cs" />
+    <Compile Include="DAO\SPFrameworkParameters.cs" />
+    <Compile Include="DAO\SPLogicalException.cs" />
+    <Compile Include="DAO\SPResultBase.cs" />
+    <Compile Include="DAO\SPWrapperBase.cs" />
+    <Compile Include="DataNotFoundException.cs" />
+    <Compile Include="emPlatform.cs" />
+    <Compile Include="Encryption\AesWrapper.cs" />
+    <Compile Include="Encryption\ByteArrayEncoder.cs" />
+    <Compile Include="Encryption\ByteEncodeMethod.cs" />
+    <Compile Include="Encryption\EncryptedParamAttribute.cs" />
+    <Compile Include="Encryption\EncryptedParamContainer.cs" />
+    <Compile Include="Encryption\EncryptedParamException.cs" />
+    <Compile Include="Encryption\KeyNIvSet.cs" />
+    <Compile Include="Encryption\ParamEncoder.cs" />
+    <Compile Include="Encryption\RSACore.cs" />
+    <Compile Include="Encryption\RSACrypto.cs" />
+    <Compile Include="Encryption\RSAKeyEncoded.cs" />
+    <Compile Include="Encryption\RSASimpleWrapper.cs" />
+    <Compile Include="Encryption\RSAStringUtil.cs" />
+    <Compile Include="Encryption\RSAWrapper.cs" />
+    <Compile Include="Encryption\ScrambleTable.cs" />
+    <Compile Include="Environment.cs" />
+    <Compile Include="InvalidParameterException.cs" />
+    <Compile Include="Log\ErrorLog.cs" />
+    <Compile Include="Log\ErrorLogConnectionStringProvider.cs" />
+    <Compile Include="Log\ErrorLogCreateSPResult.cs" />
+    <Compile Include="Log\ErrorLogCreateSPWrapper.cs" />
+    <Compile Include="Log\ErrorLogInfo.cs" />
+    <Compile Include="Log\FileLog.cs" />
+    <Compile Include="Log\IISLog.cs" />
+    <Compile Include="Log\LightErrorLogCreateSPWrapper.cs" />
+    <Compile Include="Net\IPFilter.cs" />
+    <Compile Include="Net\IPRange.cs" />
+    <Compile Include="Net\MailUtil.cs" />
+    <Compile Include="Net\NexonIPFilter.cs" />
+    <Compile Include="ParseUtil.cs" />
+    <Compile Include="Platform.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceCode.cs" />
+    <Compile Include="Session\SessionBase.cs" />
+    <Compile Include="Web\AccessInfo.cs" />
+    <Compile Include="Web\AccessList.cs" />
+    <Compile Include="Web\BlockInfo.cs" />
+    <Compile Include="Web\CacheUtil.cs" />
+    <Compile Include="Web\Cookie.cs" />
+    <Compile Include="Web\EncryptedRequestParam.cs" />
+    <Compile Include="Web\EncryptInfoPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Page.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\PageType.cs" />
+    <Compile Include="Web\QueryString.cs" />
+    <Compile Include="Web\Redirector.cs" />
+    <Compile Include="Web\RedirectorRegEx.cs" />
+    <Compile Include="Web\RequestController.cs" />
+    <Compile Include="Web\RequestParamAttribute.cs" />
+    <Compile Include="Web\UI\WebControls\AllEmptyItem.cs" />
+    <Compile Include="Web\UI\WebControls\EmptyItem.cs" />
+    <Compile Include="Web\UI\WebControls\JumpSeparator.cs" />
+    <Compile Include="Web\UI\WebControls\Label.cs" />
+    <Compile Include="Web\UI\WebControls\LinkButton.cs" />
+    <Compile Include="Web\UI\WebControls\PagingContainer.cs" />
+    <Compile Include="Web\UI\WebControls\RadioButtonList.cs" />
+    <Compile Include="Web\UI\WebControls\Repeater.cs" />
+    <Compile Include="Web\UI\WebControls\SelectBox.cs" />
+    <Compile Include="Web\UI\WebControls\TextBox.cs" />
+    <Compile Include="Web\Url.cs" />
+    <Compile Include="Web\UrlRequestParam.cs" />
+    <Compile Include="Xml\JsonSerializer.cs" />
+    <Compile Include="Xml\XmlSerializeAttribute.cs" />
+    <Compile Include="Xml\XmlSerializer.cs" />
+    <Compile Include="Xml\XmlUtil.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

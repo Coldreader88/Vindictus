@@ -1,0 +1,40 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ExecutionSupporter.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="s" Type="System.String" Scope="User">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="LocationServicePort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">53</Value>
+    </Setting>
+    <Setting Name="AdminServiceAddr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="AdminServicePort" Type="System.UInt16" Scope="User">
+      <Value Profile="(Default)">27011</Value>
+    </Setting>
+    <Setting Name="SupporterClientPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">27041</Value>
+    </Setting>
+    <Setting Name="ServiceName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Mabinogi: Heroes ko-KR</Value>
+    </Setting>
+    <Setting Name="ServerBin" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DSBin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Z:\Heroes\game\client</Value>
+    </Setting>
+    <Setting Name="LogDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\Logs</Value>
+    </Setting>
+    <Setting Name="heroesSupportConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\SQLEXPRESS;Initial Catalog=heroesSupport;Integrated Security=True&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.\SQLEXPRESS;Initial Catalog=heroesSupport;Integrated Security=True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

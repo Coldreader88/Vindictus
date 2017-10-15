@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile CurrentProfile="(Default)" GeneratedClassNamespace="AdminClient.Properties" GeneratedClassName="Settings" xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConnectIP" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">211.39.128.79</Value>
+    </Setting>
+    <Setting Name="ConnectPort" Type="System.UInt16" Scope="Application">
+      <Value Profile="(Default)">27011</Value>
+    </Setting>
+    <Setting Name="heroesConnectionString" Type="(Connection string)" Scope="Application">
+      <Value Profile="(Default)">Data Source=211.39.128.122;Initial Catalog=heroes;User ID=devcat-temp;Password=neb-x7wrENu_A_@drer@phaPrADr#hafru?aphUcUswapuZAnaTe$u5ra*rechap</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

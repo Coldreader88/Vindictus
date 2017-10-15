@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile CurrentProfile="(Default)" GeneratedClassNamespace="Nexon.Com.Group.Game.Wrapper.Properties" GeneratedClassName="Settings" xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Nexon_Com_Group_Game_Wrapper_hereoes_heroes" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://api.guild.nexon.com/soap/heroes.asmx</Value>
+    </Setting>
+    <Setting Name="Nexon_Com_Group_Game_Wrapper_HeroesGameGuild_heroes" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://apiguild.nexon.com/service/heroes.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3A946E29-51AB-466A-B7A5-36C2A59B92CA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NPlot</RootNamespace>
+    <AssemblyName>NPlot</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\..\HeroesOpTool\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdapterUtils.cs" />
+    <Compile Include="ArrowItem.cs" />
+    <Compile Include="AxesConstraint.cs" />
+    <Compile Include="Axis.cs" />
+    <Compile Include="BarPlot.cs" />
+    <Compile Include="BasePlot.cs" />
+    <Compile Include="BaseSequencePlot.cs" />
+    <Compile Include="Bitmap\Bitmap.PlotSurface2D.cs" />
+    <Compile Include="CandlePlot.cs" />
+    <Compile Include="DateTimeAxis.cs" />
+    <Compile Include="FilledRegion.cs" />
+    <Compile Include="FontScaler.cs" />
+    <Compile Include="Grid.cs" />
+    <Compile Include="HistogramPlot.cs" />
+    <Compile Include="HorizontalLine.cs" />
+    <Compile Include="IDrawable.cs" />
+    <Compile Include="IGradient.cs" />
+    <Compile Include="ImagePlot.cs" />
+    <Compile Include="IPlot.cs" />
+    <Compile Include="IPlotSurface2D.cs" />
+    <Compile Include="ISequencePlot.cs" />
+    <Compile Include="ISurface.cs" />
+    <Compile Include="ITransform2D.cs" />
+    <Compile Include="LabelAxis.cs" />
+    <Compile Include="LabelPointPlot.cs" />
+    <Compile Include="Legend.cs" />
+    <Compile Include="LegendBase.cs" />
+    <Compile Include="LinearAxis.cs" />
+    <Compile Include="LinearGradient.cs" />
+    <Compile Include="LinePlot.cs" />
+    <Compile Include="LogAxis.cs" />
+    <Compile Include="Marker.cs" />
+    <Compile Include="MarkerItem.cs" />
+    <Compile Include="NPlotException.cs" />
+    <Compile Include="PageAlignedPhysicalAxis.cs" />
+    <Compile Include="PhysicalAxis.cs" />
+    <Compile Include="PiAxis.cs" />
+    <Compile Include="PiePlot.cs" />
+    <Compile Include="PlotSurface2D.cs" />
+    <Compile Include="PointD.cs" />
+    <Compile Include="PointPlot.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RectangleBrushes.cs" />
+    <Compile Include="RectangleD.cs" />
+    <Compile Include="SequenceAdapter.cs" />
+    <Compile Include="StartStep.cs" />
+    <Compile Include="StepGradient.cs" />
+    <Compile Include="StepPlot.cs" />
+    <Compile Include="TextItem.cs" />
+    <Compile Include="TradingDateTimeAxis.cs" />
+    <Compile Include="Transform2D.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="VerticalLine.cs" />
+    <Compile Include="Web\Design\Web.Design.PlotSurface2D.cs" />
+    <Compile Include="Web\Web.PlotSurface2D.cs" />
+    <Compile Include="Windows\Windows.PlotSurface2D.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NPlot-icon.ico" />
+    <EmbeddedResource Include="Windows\PlotSurface2D.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
