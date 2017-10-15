@@ -89,6 +89,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeAuthServiceCore", "Cafe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashShopService", "CashShopService\CashShopService\CashShopService.csproj", "{547920A8-1431-4F85-B3E3-7D82CA2B0A25}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExecutionServiceCore", "ExecutionServiceCore\ExecutionServiceCore\ExecutionServiceCore.csproj", "{8FB9457A-6280-41B2-A6B5-495677883D7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -439,6 +441,14 @@ Global
 		{547920A8-1431-4F85-B3E3-7D82CA2B0A25}.Release|x64.Build.0 = Release|x64
 		{547920A8-1431-4F85-B3E3-7D82CA2B0A25}.Release|x86.ActiveCfg = Release|x86
 		{547920A8-1431-4F85-B3E3-7D82CA2B0A25}.Release|x86.Build.0 = Release|x86
+		{8FB9457A-6280-41B2-A6B5-495677883D7C}.Debug|x64.ActiveCfg = Debug|x64
+		{8FB9457A-6280-41B2-A6B5-495677883D7C}.Debug|x64.Build.0 = Debug|x64
+		{8FB9457A-6280-41B2-A6B5-495677883D7C}.Debug|x86.ActiveCfg = Debug|x86
+		{8FB9457A-6280-41B2-A6B5-495677883D7C}.Debug|x86.Build.0 = Debug|x86
+		{8FB9457A-6280-41B2-A6B5-495677883D7C}.Release|x64.ActiveCfg = Release|x64
+		{8FB9457A-6280-41B2-A6B5-495677883D7C}.Release|x64.Build.0 = Release|x64
+		{8FB9457A-6280-41B2-A6B5-495677883D7C}.Release|x86.ActiveCfg = Release|x86
+		{8FB9457A-6280-41B2-A6B5-495677883D7C}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
