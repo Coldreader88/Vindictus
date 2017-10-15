@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile CurrentProfile="(Default)" GeneratedClassNamespace="CashShopService.Properties" GeneratedClassName="Settings" xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="heroesLogConnectionString" Type="(Connection string)" Scope="Application">
+      <Value Profile="(Default)">Data Source=.\SQLEXPRESS;Initial Catalog=heroesLOG;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="heroesConnectionString" Type="(Connection string)" Scope="Application">
+      <Value Profile="(Default)">Data Source=.\SQLEXPRESS;Initial Catalog=heroes;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="heroesShopConnectionString" Type="(Connection string)" Scope="Application">
+      <Value Profile="(Default)">Data Source=.\sqlexpress;Initial Catalog=heroesWeb;Integrated Security=True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

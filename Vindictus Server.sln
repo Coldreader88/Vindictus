@@ -85,6 +85,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeAuthJPNVersionService",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeAuthOldVersionService", "CafeAuthOldVersionService\CafeAuthOldVersionService\CafeAuthOldVersionService.csproj", "{55887740-7A72-4EAB-A7F7-D9A7EE05A5E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeAuthServiceCore", "CafeAuthServiceCore\CafeAuthServiceCore\CafeAuthServiceCore.csproj", "{696DF6D1-009C-424C-BFB5-9EDA5366E0A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashShopService", "CashShopService\CashShopService\CashShopService.csproj", "{547920A8-1431-4F85-B3E3-7D82CA2B0A25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -419,6 +423,22 @@ Global
 		{55887740-7A72-4EAB-A7F7-D9A7EE05A5E9}.Release|x64.Build.0 = Release|x64
 		{55887740-7A72-4EAB-A7F7-D9A7EE05A5E9}.Release|x86.ActiveCfg = Release|x86
 		{55887740-7A72-4EAB-A7F7-D9A7EE05A5E9}.Release|x86.Build.0 = Release|x86
+		{696DF6D1-009C-424C-BFB5-9EDA5366E0A2}.Debug|x64.ActiveCfg = Debug|x64
+		{696DF6D1-009C-424C-BFB5-9EDA5366E0A2}.Debug|x64.Build.0 = Debug|x64
+		{696DF6D1-009C-424C-BFB5-9EDA5366E0A2}.Debug|x86.ActiveCfg = Debug|x86
+		{696DF6D1-009C-424C-BFB5-9EDA5366E0A2}.Debug|x86.Build.0 = Debug|x86
+		{696DF6D1-009C-424C-BFB5-9EDA5366E0A2}.Release|x64.ActiveCfg = Release|x64
+		{696DF6D1-009C-424C-BFB5-9EDA5366E0A2}.Release|x64.Build.0 = Release|x64
+		{696DF6D1-009C-424C-BFB5-9EDA5366E0A2}.Release|x86.ActiveCfg = Release|x86
+		{696DF6D1-009C-424C-BFB5-9EDA5366E0A2}.Release|x86.Build.0 = Release|x86
+		{547920A8-1431-4F85-B3E3-7D82CA2B0A25}.Debug|x64.ActiveCfg = Debug|x64
+		{547920A8-1431-4F85-B3E3-7D82CA2B0A25}.Debug|x64.Build.0 = Debug|x64
+		{547920A8-1431-4F85-B3E3-7D82CA2B0A25}.Debug|x86.ActiveCfg = Debug|x86
+		{547920A8-1431-4F85-B3E3-7D82CA2B0A25}.Debug|x86.Build.0 = Debug|x86
+		{547920A8-1431-4F85-B3E3-7D82CA2B0A25}.Release|x64.ActiveCfg = Release|x64
+		{547920A8-1431-4F85-B3E3-7D82CA2B0A25}.Release|x64.Build.0 = Release|x64
+		{547920A8-1431-4F85-B3E3-7D82CA2B0A25}.Release|x86.ActiveCfg = Release|x86
+		{547920A8-1431-4F85-B3E3-7D82CA2B0A25}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
