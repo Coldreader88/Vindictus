@@ -97,6 +97,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuildService", "GuildServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackShieldServiceCore", "HackShieldServiceCore\HackShieldServiceCore\HackShieldServiceCore.csproj", "{41FC1B0E-E48A-40B7-B6A2-C8B9705F77D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSService", "DSService\DSService\DSService.csproj", "{9A8D7F95-6F65-48EC-AAB4-7622E79FE871}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -479,6 +481,14 @@ Global
 		{41FC1B0E-E48A-40B7-B6A2-C8B9705F77D9}.Release|x64.Build.0 = Release|x64
 		{41FC1B0E-E48A-40B7-B6A2-C8B9705F77D9}.Release|x86.ActiveCfg = Release|x86
 		{41FC1B0E-E48A-40B7-B6A2-C8B9705F77D9}.Release|x86.Build.0 = Release|x86
+		{9A8D7F95-6F65-48EC-AAB4-7622E79FE871}.Debug|x64.ActiveCfg = Debug|x64
+		{9A8D7F95-6F65-48EC-AAB4-7622E79FE871}.Debug|x64.Build.0 = Debug|x64
+		{9A8D7F95-6F65-48EC-AAB4-7622E79FE871}.Debug|x86.ActiveCfg = Debug|x86
+		{9A8D7F95-6F65-48EC-AAB4-7622E79FE871}.Debug|x86.Build.0 = Debug|x86
+		{9A8D7F95-6F65-48EC-AAB4-7622E79FE871}.Release|x64.ActiveCfg = Release|x64
+		{9A8D7F95-6F65-48EC-AAB4-7622E79FE871}.Release|x64.Build.0 = Release|x64
+		{9A8D7F95-6F65-48EC-AAB4-7622E79FE871}.Release|x86.ActiveCfg = Release|x86
+		{9A8D7F95-6F65-48EC-AAB4-7622E79FE871}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A8D7F95-6F65-48EC-AAB4-7622E79FE871}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DSService</RootNamespace>
+    <AssemblyName>DSService</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\..\..\en-eu-x-gm\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ServiceCore">
+      <HintPath>..\..\..\..\en-eu-x-gm\Bin\ServiceCore.dll</HintPath>
+    </Reference>
+    <Reference Include="UnifiedNetwork">
+      <HintPath>..\..\..\..\en-eu-x-gm\Bin\UnifiedNetwork.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Core">
+      <HintPath>..\..\..\..\en-eu-x-gm\Bin\Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="Utility">
+      <HintPath>..\..\..\..\en-eu-x-gm\Bin\Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DSContents.cs" />
+    <Compile Include="DSEntity.cs" />
+    <Compile Include="DSEntityMaker\DSEntityInfo.cs" />
+    <Compile Include="DSEntityMaker\DSEntityMakerQueue.cs" />
+    <Compile Include="DSEntityMaker\DSEntityMakerSystem.cs" />
+    <Compile Include="DSEntityMaker\DSEntityState.cs" />
+    <Compile Include="DSEntityMaker\DSServiceInfo.cs" />
+    <Compile Include="DSEntityMaker\IDSEntityMakerSystem.cs" />
+    <Compile Include="DSLog.cs" />
+    <Compile Include="DSLogDataContext.cs" />
+    <Compile Include="DSService.cs" />
+    <Compile Include="Message\DSHostConnectionEstablish.cs" />
+    <Compile Include="Message\DSHostConnectionMessage.cs" />
+    <Compile Include="Processor\CancelMakeDSEntityProcessor.cs" />
+    <Compile Include="Processor\DSCheatToggleProcessor.cs" />
+    <Compile Include="Processor\FrondendConn_Extension.cs" />
+    <Compile Include="Processor\LaunchDSProcessor.cs" />
+    <Compile Include="Processor\LaunchPvpDSProcessor.cs" />
+    <Compile Include="Processor\MakeDSEntityProcessor.cs" />
+    <Compile Include="Processor\QueryDSInfoProcessor.cs" />
+    <Compile Include="Processor\QueryDSQuestListProcessor.cs" />
+    <Compile Include="Processor\QueryDSServiceInfoProcessor.cs" />
+    <Compile Include="Processor\QueryPvpDSInfosProcessor.cs" />
+    <Compile Include="Processor\RegisterDSEntityProcessor.cs" />
+    <Compile Include="Processor\RegisterDSPartyProcessor.cs" />
+    <Compile Include="Processor\RegisterDSServiceInfoProcessor.cs" />
+    <Compile Include="Processor\RemoveDSEntityProcessor.cs" />
+    <Compile Include="Processor\RequestMakeDSEntityProcessor.cs" />
+    <Compile Include="Processor\UnregisterDSPlayerProcessor.cs" />
+    <Compile Include="Processor\UpdateDSPlayerInfoProcessor.cs" />
+    <Compile Include="Processor\UpdateDSShipInfoProcessor.cs" />
+    <Compile Include="Processor\_CheatCommandProcessor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SendPacketDSProcessor.cs" />
+    <Compile Include="TcpClientHolder.cs" />
+    <Compile Include="WaitingQueue\Connection\Dummy.cs" />
+    <Compile Include="WaitingQueue\Connection\ExternalService.cs" />
+    <Compile Include="WaitingQueue\Connection\IExternalOperation.cs" />
+    <Compile Include="WaitingQueue\DSGameState.cs" />
+    <Compile Include="WaitingQueue\DSInfoExtension.cs" />
+    <Compile Include="WaitingQueue\DSPlayer.cs" />
+    <Compile Include="WaitingQueue\DSShip.cs" />
+    <Compile Include="WaitingQueue\DSShipState.cs" />
+    <Compile Include="WaitingQueue\DSShip_EnterFunc.cs" />
+    <Compile Include="WaitingQueue\DSStorage.cs" />
+    <Compile Include="WaitingQueue\DSWaitingParty.cs" />
+    <Compile Include="WaitingQueue\DSWaitingQueue.cs" />
+    <Compile Include="WaitingQueue\DSWaitingSystem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\log4net\log4net\log4net.csproj">
+      <Project>{181fe707-e161-4722-9f38-6aaab6faa106}</Project>
+      <Name>log4net</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
