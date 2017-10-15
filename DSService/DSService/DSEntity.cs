@@ -179,27 +179,6 @@ namespace DSService
 			}
 		}
 
-		public void StopDS()
-		{
-			this.CalculateDSEndCount();
-			this.FPS = 0;
-			switch (this.DSType)
-			{
-			case DSEntity.DSEntityType.DSQuest:
-				this.StopQuestDS();
-				return;
-			case DSEntity.DSEntityType.DSPvp:
-				this.StopPvpDS();
-				return;
-			default:
-				if (this.Process != null)
-				{
-					this.Process.Kill();
-				}
-				return;
-			}
-		}
-
 		public void StartQuestDS(string questID, long microPlayID, long partyID, long frontendID, bool isGiantRaid, bool isAdultMode)
 		{
 			Log<DSEntity>.Logger.InfoFormat("[DS{0}] StartDS : {1}", this.DSID, questID);
@@ -458,87 +437,182 @@ namespace DSService
 			}
 		}
 
-		private void StopQuestDS()
-		{
-			DSLog.AddLog(this, "StopQuestDS", "");
-			this.FPS = 0;
-			if (this.IsDSProcessRestart())
-			{
-				if (this.Process == null)
-				{
-					goto IL_AB;
-				}
-				try
-				{
-					if (!this.Process.HasExited)
-					{
-						Process process = this.Process;
-						this.Process = null;
-						process.Kill();
-						DSLog.AddLog(this, "KillProcess (StopQuestDS)", "");
-					}
-					goto IL_AB;
-				}
-				catch (Exception ex)
-				{
-					Log<DSEntity>.Logger.FatalFormat("KillProcess Failed!!\n - {0}", ex);
-					DSLog.AddLog(this, "KillProcess Failed", "");
-					goto IL_AB;
-				}
-			}
-			DSService.Instance.Thread.Enqueue(Job.Create(delegate
-			{
-				if (this.Process != null && !this.Process.HasExited)
-				{
-					if (FeatureMatrix.IsEnable("DSDynamicLoad"))
-					{
-						UpdateDSShipInfo op = new UpdateDSShipInfo(DSService.Instance.ID, this.DSID, 0L, UpdateDSShipInfo.CommandEnum.DSFinished, this.FailReason);
-						DSService.RequestDSBossOperation(op);
-					}
-					else
-					{
-						DSService.RequestDSBossOperation(new UpdateDSShipInfo(this.DSID, 0L, UpdateDSShipInfo.CommandEnum.DSFinished, this.FailReason));
-					}
-				}
-				this.FailReason = null;
-			}));
-			IL_AB:
-			if (this.PartyConn != null)
-			{
-				IEntityProxy partyConn = this.PartyConn;
-				this.PartyConn = null;
-				partyConn.Close(true);
-				DSLog.AddLog(this, "ClosePartyConn", "");
-			}
-			if (this.MicroPlayConn != null)
-			{
-				IEntityProxy microPlayConn = this.MicroPlayConn;
-				this.MicroPlayConn = null;
-				microPlayConn.Close(true);
-				DSLog.AddLog(this, "CloseMicroPlayConn", "");
-			}
-			if (this.FrontendConn != null)
-			{
-				IEntityProxy frontendConn = this.FrontendConn;
-				this.FrontendConn = null;
-				frontendConn.Close(true);
-				DSLog.AddLog(this, "CloseFrontendConn", "");
-			}
-			if (this.TcpClient != null && this.IsDSProcessRestart())
-			{
-				this.TcpClient.Disconnected -= this.TcpClient_Disconnected;
-				this.TcpClient = null;
-			}
-			this.QuestID = null;
-			this.PartyID = -1L;
-			this.MicroPlayID = -1L;
-			this.FrontendID = -1L;
-			this.BlockEntering = false;
-			this.GameStartTime = DateTime.UtcNow;
-			this.GameStartComplete = false;
-		}
+        public void StopDS()
+        {
+            this.CalculateDSEndCount();
+            this.FPS = 0;
+            switch (this.DSType)
+            {
+                case DSEntity.DSEntityType.DSQuest:
+                    {
+                        this.StopQuestDS();
+                        return;
+                    }
+                case DSEntity.DSEntityType.DSPvp:
+                    {
+                        this.StopPvpDS();
+                        return;
+                    }
+            }
+            if (this.Process != null)
+            {
+                this.Process.Kill();
+            }
+        }
 
-		public void RegisterConnection(Devcat.Core.Net.TcpClient tcpClient)
+        private void StopPvpDS()
+        {
+            DSLog.AddLog(this, "StopPvpDS", "");
+            this.FPS = 0;
+            if (this.IsDSProcessRestart())
+            {
+                if (this.Process != null)
+                {
+                    try
+                    {
+                        if (!this.Process.HasExited)
+                        {
+                            Process process = this.Process;
+                            this.Process = null;
+                            process.Kill();
+                            DSLog.AddLog(this, "KillProcess (StopPvpDS)", "");
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        Log<DSEntity>.Logger.FatalFormat("KillProcess Failed!!\n - {0}", exception);
+                        DSLog.AddLog(this, "KillProcess Failed", "");
+                    }
+                }
+            }
+            else if (FeatureMatrix.IsEnable("DSDynamicLoad"))
+            {
+                DSService.Instance.Thread.Enqueue(Job.Create(() => {
+                    if (this.Process != null && !this.Process.HasExited)
+                    {
+                        DSService.RequestDSBossOperation(new UpdateDSShipInfo(DSService.Instance.ID, this.DSID, (long)0, UpdateDSShipInfo.CommandEnum.PVPFinished, this.FailReason));
+                        this.FailReason = null;
+                    }
+                }));
+            }
+            if (this.PartyConn != null)
+            {
+                IEntityProxy partyConn = this.PartyConn;
+                this.PartyConn = null;
+                partyConn.Close(true);
+                DSLog.AddLog(this, "ClosePartyConn", "");
+            }
+            if (this.MicroPlayConn != null)
+            {
+                IEntityProxy microPlayConn = this.MicroPlayConn;
+                this.MicroPlayConn = null;
+                microPlayConn.Close(true);
+                DSLog.AddLog(this, "CloseMicroPlayConn", "");
+            }
+            if (this.FrontendConn != null)
+            {
+                IEntityProxy frontendConn = this.FrontendConn;
+                this.FrontendConn = null;
+                frontendConn.Close(true);
+                DSLog.AddLog(this, "CloseFrontendConn", "");
+            }
+            if (this.PvpConn != null)
+            {
+                IEntityProxy pvpConn = this.PvpConn;
+                this.PvpConn = null;
+                pvpConn.Close(true);
+                DSLog.AddLog(this, "ClosePvpConn", "");
+            }
+            if (this.TcpClient != null && this.IsDSProcessRestart())
+            {
+                this.TcpClient.Disconnected -= new EventHandler<EventArgs>(this.TcpClient_Disconnected);
+                this.TcpClient = null;
+            }
+            this.QuestID = null;
+            this.PartyID = (long)-1;
+            this.MicroPlayID = (long)-1;
+            this.FrontendID = (long)-1;
+            this.BlockEntering = false;
+            this.GameStartTime = DateTime.UtcNow;
+            this.GameStartComplete = false;
+        }
+
+        private void StopQuestDS()
+        {
+            DSLog.AddLog(this, "StopQuestDS", "");
+            this.FPS = 0;
+            if (!this.IsDSProcessRestart())
+            {
+                DSService.Instance.Thread.Enqueue(Job.Create(() =>
+                {
+                    if (this.Process != null && !this.Process.HasExited)
+                    {
+                        if (!FeatureMatrix.IsEnable("DSDynamicLoad"))
+                        {
+                            DSService.RequestDSBossOperation(new UpdateDSShipInfo(this.DSID, (long)0, UpdateDSShipInfo.CommandEnum.DSFinished, this.FailReason));
+                        }
+                        else
+                        {
+                            DSService.RequestDSBossOperation(new UpdateDSShipInfo(DSService.Instance.ID, this.DSID, (long)0, UpdateDSShipInfo.CommandEnum.DSFinished, this.FailReason));
+                        }
+                    }
+                    this.FailReason = null;
+                }));
+            }
+            else if (this.Process != null)
+            {
+                try
+                {
+                    if (!this.Process.HasExited)
+                    {
+                        Process process = this.Process;
+                        this.Process = null;
+                        process.Kill();
+                        DSLog.AddLog(this, "KillProcess (StopQuestDS)", "");
+                    }
+                }
+                catch (Exception exception)
+                {
+                    Log<DSEntity>.Logger.FatalFormat("KillProcess Failed!!\n - {0}", exception);
+                    DSLog.AddLog(this, "KillProcess Failed", "");
+                }
+            }
+            if (this.PartyConn != null)
+            {
+                IEntityProxy partyConn = this.PartyConn;
+                this.PartyConn = null;
+                partyConn.Close(true);
+                DSLog.AddLog(this, "ClosePartyConn", "");
+            }
+            if (this.MicroPlayConn != null)
+            {
+                IEntityProxy microPlayConn = this.MicroPlayConn;
+                this.MicroPlayConn = null;
+                microPlayConn.Close(true);
+                DSLog.AddLog(this, "CloseMicroPlayConn", "");
+            }
+            if (this.FrontendConn != null)
+            {
+                IEntityProxy frontendConn = this.FrontendConn;
+                this.FrontendConn = null;
+                frontendConn.Close(true);
+                DSLog.AddLog(this, "CloseFrontendConn", "");
+            }
+            if (this.TcpClient != null && this.IsDSProcessRestart())
+            {
+                this.TcpClient.Disconnected -= new EventHandler<EventArgs>(this.TcpClient_Disconnected);
+                this.TcpClient = null;
+            }
+            this.QuestID = null;
+            this.PartyID = (long)-1;
+            this.MicroPlayID = (long)-1;
+            this.FrontendID = (long)-1;
+            this.BlockEntering = false;
+            this.GameStartTime = DateTime.UtcNow;
+            this.GameStartComplete = false;
+        }
+
+        public void RegisterConnection(Devcat.Core.Net.TcpClient tcpClient)
 		{
 			Log<DSEntity>.Logger.WarnFormat("[DS{0}] RegisterConnection", this.DSID);
 			this.TcpClient = tcpClient;
@@ -1488,89 +1562,6 @@ namespace DSService
 				Log<DSEntity>.Logger.FatalFormat("InitializeServerPvp Failed!!\n - {0}", ex4);
 				DSLog.AddLog(this, "InitializeServerPvp Failed", "");
 			}
-		}
-
-		private void StopPvpDS()
-		{
-			DSLog.AddLog(this, "StopPvpDS", "");
-			this.FPS = 0;
-			if (this.IsDSProcessRestart())
-			{
-				if (this.Process == null)
-				{
-					goto IL_B7;
-				}
-				try
-				{
-					if (!this.Process.HasExited)
-					{
-						Process process = this.Process;
-						this.Process = null;
-						process.Kill();
-						DSLog.AddLog(this, "KillProcess (StopPvpDS)", "");
-					}
-					goto IL_B7;
-				}
-				catch (Exception ex)
-				{
-					Log<DSEntity>.Logger.FatalFormat("KillProcess Failed!!\n - {0}", ex);
-					DSLog.AddLog(this, "KillProcess Failed", "");
-					goto IL_B7;
-				}
-			}
-			if (FeatureMatrix.IsEnable("DSDynamicLoad"))
-			{
-				DSService.Instance.Thread.Enqueue(Job.Create(delegate
-				{
-					if (this.Process != null && !this.Process.HasExited)
-					{
-						UpdateDSShipInfo op = new UpdateDSShipInfo(DSService.Instance.ID, this.DSID, 0L, UpdateDSShipInfo.CommandEnum.PVPFinished, this.FailReason);
-						DSService.RequestDSBossOperation(op);
-						this.FailReason = null;
-					}
-				}));
-			}
-			IL_B7:
-			if (this.PartyConn != null)
-			{
-				IEntityProxy partyConn = this.PartyConn;
-				this.PartyConn = null;
-				partyConn.Close(true);
-				DSLog.AddLog(this, "ClosePartyConn", "");
-			}
-			if (this.MicroPlayConn != null)
-			{
-				IEntityProxy microPlayConn = this.MicroPlayConn;
-				this.MicroPlayConn = null;
-				microPlayConn.Close(true);
-				DSLog.AddLog(this, "CloseMicroPlayConn", "");
-			}
-			if (this.FrontendConn != null)
-			{
-				IEntityProxy frontendConn = this.FrontendConn;
-				this.FrontendConn = null;
-				frontendConn.Close(true);
-				DSLog.AddLog(this, "CloseFrontendConn", "");
-			}
-			if (this.PvpConn != null)
-			{
-				IEntityProxy pvpConn = this.PvpConn;
-				this.PvpConn = null;
-				pvpConn.Close(true);
-				DSLog.AddLog(this, "ClosePvpConn", "");
-			}
-			if (this.TcpClient != null && this.IsDSProcessRestart())
-			{
-				this.TcpClient.Disconnected -= this.TcpClient_Disconnected;
-				this.TcpClient = null;
-			}
-			this.QuestID = null;
-			this.PartyID = -1L;
-			this.MicroPlayID = -1L;
-			this.FrontendID = -1L;
-			this.BlockEntering = false;
-			this.GameStartTime = DateTime.UtcNow;
-			this.GameStartComplete = false;
 		}
 
 		public void RegisterConnectionPvp(Devcat.Core.Net.TcpClient tcpClient)
