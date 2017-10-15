@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7828690E-C01C-4F06-AF52-51D659F0A98D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GuildService</RootNamespace>
+    <AssemblyName>GuildService</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\..\..\..\en-eu-x-gm\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="UnifiedNetwork">
+      <HintPath>..\..\..\..\en-eu-x-gm\Bin\UnifiedNetwork.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="WcfChatRelay.Server">
+      <HintPath>..\..\..\..\en-eu-x-gm\Bin\WcfChatRelay.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceCore">
+      <HintPath>..\..\..\..\en-eu-x-gm\Bin\ServiceCore.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Core">
+      <HintPath>..\..\..\..\en-eu-x-gm\Bin\Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="Nexon.Com.Group.Game.Wrapper">
+      <HintPath>..\..\..\..\en-eu-x-gm\Bin\Nexon.Com.Group.Game.Wrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="Utility">
+      <HintPath>..\..\..\..\en-eu-x-gm\Bin\Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net" />
+    <Reference Include="Nexon.Com">
+      <HintPath>..\..\..\..\en-eu-x-gm\Bin\Nexon.Com.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\AsyncFunc.cs" />
+    <Compile Include="API\AsyncFuncSync.cs" />
+    <Compile Include="API\GroupIDCheckResult.cs" />
+    <Compile Include="API\GroupNameCheckResult.cs" />
+    <Compile Include="API\GuildAPI.cs" />
+    <Compile Include="API\GuildAPI_Extension.cs" />
+    <Compile Include="API\HeroesAPI\GuildAllMemberGetListResult.cs" />
+    <Compile Include="API\HeroesAPI\GuildGetInfoByNameResult.cs" />
+    <Compile Include="API\HeroesAPI\GuildGetInfoBySnResult.cs" />
+    <Compile Include="API\HeroesAPI\GuildGroupChangeMasterResult.cs" />
+    <Compile Include="API\HeroesAPI\GuildGroupGetListByGuildMasterResult.cs" />
+    <Compile Include="API\HeroesAPI\GuildGroupGetListByGuildNameResult.cs" />
+    <Compile Include="API\HeroesAPI\GuildGroupMemberGetInfoResult.cs" />
+    <Compile Include="API\HeroesAPI\GuildGroupUserGetInfoResult.cs" />
+    <Compile Include="API\HeroesAPI\GuildUserGroupGetListResult.cs" />
+    <Compile Include="API\HeroesAPI\GuildUserJoinRejectResult.cs" />
+    <Compile Include="API\HeroesAPI\GuildUserJoinResult.cs" />
+    <Compile Include="API\HeroesAPI\HeroesGuildAPI.cs" />
+    <Compile Include="API\HeroesAPI\HeroesGuildDBDataContext.cs" />
+    <Compile Include="API\HeroesGuildInfo.cs" />
+    <Compile Include="API\HeroesGuildMemberInfo.cs" />
+    <Compile Include="API\HeroesGuildUserType.cs" />
+    <Compile Include="API\HeroesUserGuildInfo.cs" />
+    <Compile Include="API\IGuildCore.cs" />
+    <Compile Include="API\PlatformAPI\PlatformGuildAPI.cs" />
+    <Compile Include="API\TriggerSync.cs" />
+    <Compile Include="GetCharacterInfoByName.cs" />
+    <Compile Include="GetGuildCharacterMaxLevel.cs" />
+    <Compile Include="GetGuildStorageBriefLogsToday.cs" />
+    <Compile Include="GetGuildStorageBriefLogs.cs" />
+    <Compile Include="GetGuildStorageItemLogsToday.cs" />
+    <Compile Include="GetGuildStorageItemLogs.cs" />
+    <Compile Include="GetGuildStorageSetting.cs" />
+    <Compile Include="GetInGameGuildCharacterInfo.cs" />
+    <Compile Include="GetInGameGuildDailyGainGP.cs" />
+    <Compile Include="GetInGameGuildInfo.cs" />
+    <Compile Include="GetInGameGuildLastDailyGPReset.cs" />
+    <Compile Include="Guild.cs" />
+    <Compile Include="GuildCharacterInfo.cs" />
+    <Compile Include="GuildChatRoom.cs" />
+    <Compile Include="GuildChatWebMember.cs" />
+    <Compile Include="GuildContents.cs" />
+    <Compile Include="GuildEntity.cs" />
+    <Compile Include="GuildLedgerEventType.cs" />
+    <Compile Include="GuildLog.cs" />
+    <Compile Include="GuildMember.cs" />
+    <Compile Include="GuildOperationResult.cs" />
+    <Compile Include="GuildService.cs" />
+    <Compile Include="GuildStorageEventCode.cs" />
+    <Compile Include="GuildStorageManager.cs" />
+    <Compile Include="GuildStorageOperationCode.cs" />
+    <Compile Include="HeroesDataContext.cs" />
+    <Compile Include="HeroesGuildChatRelay.cs" />
+    <Compile Include="HeroesLogDataContext.cs" />
+    <Compile Include="IGuildChatMember.cs" />
+    <Compile Include="LogData.cs" />
+    <Compile Include="OnlineGuildMember.cs" />
+    <Compile Include="OperationType.cs" />
+    <Compile Include="Processor\AddGuildStorageItemProcessor.cs" />
+    <Compile Include="Processor\AdminCommandProcessor.cs" />
+    <Compile Include="Processor\ArrangeGuildStorageItemProcessor.cs" />
+    <Compile Include="Processor\ChangeGuildIDAndNameProcessor.cs" />
+    <Compile Include="Processor\ChangeGuildMasterProcessor.cs" />
+    <Compile Include="Processor\CloseGuildProcessor.cs" />
+    <Compile Include="Processor\ConnectGuildProcessor.cs" />
+    <Compile Include="Processor\DirectPurchaseGuildItemProcessor.cs" />
+    <Compile Include="Processor\DoGuildOperationProcessor.cs" />
+    <Compile Include="Processor\EditGuildNoticeProcessor.cs" />
+    <Compile Include="Processor\FindNewbieRecommendGuildProcessor.cs" />
+    <Compile Include="Processor\GiveGuildGPProcessor.cs" />
+    <Compile Include="Processor\GuildChatProcessor.cs" />
+    <Compile Include="Processor\HandleGuildStorageSessionProcessor.cs" />
+    <Compile Include="Processor\InviteGuildProcessor.cs" />
+    <Compile Include="Processor\JoinGuildChatRoomProcessor.cs" />
+    <Compile Include="Processor\JoinGuildProcessor.cs" />
+    <Compile Include="Processor\LeaveGuildProcessor.cs" />
+    <Compile Include="Processor\OpenGuildProcessor.cs" />
+    <Compile Include="Processor\PickGuildStorageItemProcessor.cs" />
+    <Compile Include="Processor\PurchaseGuildStorageProcessor.cs" />
+    <Compile Include="Processor\QueryGuildIDProcessor.cs" />
+    <Compile Include="Processor\QueryGuildListProcessor.cs" />
+    <Compile Include="Processor\ReportGuildMemberChangedProcessor.cs" />
+    <Compile Include="Processor\RequestNewbieRecommendGuildProcessor.cs" />
+    <Compile Include="Processor\UpdateGuildCharacterNameProcessor.cs" />
+    <Compile Include="Processor\UpdateGuildInventoryProcessor.cs" />
+    <Compile Include="Processor\UpdateGuildStorageSettingsProcessor.cs" />
+    <Compile Include="Processor\_CheatCommandProcessor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

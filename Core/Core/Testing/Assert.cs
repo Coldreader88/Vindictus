@@ -6,7 +6,7 @@ namespace Devcat.Core.Testing
 	{
 		public static void AreEqual(object expected, object actual)
 		{
-			Assert.AreEqual(expected, actual, "결과 값이 예상된 값과 다릅니다. 예상된 값: {0}, 결과 값: {1}", new object[]
+			Assert.AreEqual(expected, actual, "The result is different from the expected value Expected value: {0}, result: {1}", new object[]
 			{
 				expected.ToString(),
 				actual.ToString()
@@ -20,7 +20,7 @@ namespace Devcat.Core.Testing
 
 		public static void AreEqual<T>(T expected, T actual)
 		{
-			Assert.AreEqual<T>(expected, actual, "결과 값이 예상된 값과 다릅니다. 예상된 값: {0}, 결과 값: {1}", new object[]
+			Assert.AreEqual<T>(expected, actual, "The result is different from the expected value Expected value: {0}, result: {1}", new object[]
 			{
 				expected.ToString(),
 				actual.ToString()
@@ -34,7 +34,7 @@ namespace Devcat.Core.Testing
 
 		public static void AreNotEqual(object notExpected, object actual)
 		{
-			Assert.AreNotEqual(notExpected, actual, "결과 값이 예상된 값과 같습니다. 결과 값: {0}", new object[]
+			Assert.AreNotEqual(notExpected, actual, "The resulting value is equal to the expected value. Resulting value: {0}", new object[]
 			{
 				notExpected.ToString()
 			});
@@ -47,7 +47,7 @@ namespace Devcat.Core.Testing
 
 		public static void AreNotEqual<T>(T notExpected, T actual)
 		{
-			Assert.AreNotEqual<T>(notExpected, actual, "결과 값이 예상된 값과 같습니다. 결과 값: {0}", new object[]
+			Assert.AreNotEqual<T>(notExpected, actual, "The resulting value is equal to the expected value. Resulting value: {0}", new object[]
 			{
 				notExpected.ToString()
 			});

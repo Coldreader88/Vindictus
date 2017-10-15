@@ -142,53 +142,52 @@ namespace CafeAuthJPNVersionServiceCore
 			Log<CafeAuthJPNVersionService>.Logger.Fatal("Exception occured in CafeAuth service", e.Value);
 		}
 
-		private void connection_MessageReceived(LoginResponse Response)
-		{
-			SystemMessage systemMessage = null;
-			bool flag = false;
-			Option option = Response.Option;
-			if (option != Option.AddressExpired)
-			{
-				switch (option)
-				{
-				case Option.WelcomePrepaid:
-					if (Response.Argument > 60)
-					{
-						systemMessage = new SystemMessage(SystemMessageCategory.Notice, "GameUI_Heroes_Cafe_TimeLeft", new object[]
-						{
-							Response.Argument / 60
-						});
-						goto IL_79;
-					}
-					systemMessage = new SystemMessage(SystemMessageCategory.Notice, "GameUI_Heroes_Cafe_TimeLeft_LessThanOneHour");
-					goto IL_79;
-				case Option.PrepaidExpired:
-				case Option.PrepaidExhausted:
-					break;
-				default:
-					goto IL_79;
-				}
-			}
-			systemMessage = new SystemMessage(SystemMessageCategory.Notice, "GameUI_Heroes_Cafe_Expired");
-			flag = true;
-			IL_79:
-			if (systemMessage != null)
-			{
-				Log<CafeAuthJPNVersionService>.Logger.InfoFormat("Response from CafeAuth service: {0}", Response);
-				CafeAuth cafeAuth;
-				if (this.NxIDToEntityDic.TryGetValue(Response.NexonID, out cafeAuth))
-				{
-					SendPacket op = SendPacket.Create<SystemMessage>(systemMessage);
-					cafeAuth.FrontendConn.RequestOperation(op);
-					if (flag)
-					{
-						Scheduler.Schedule(base.Thread, Job.Create<CafeAuth>(new Action<CafeAuth>(this.Kick_User), cafeAuth), 5000);
-					}
-				}
-			}
-		}
+        private void connection_MessageReceived(LoginResponse Response)
+        {
+            SystemMessage serializeObject = (SystemMessage)null;
+            bool flag = false;
+            switch (Response.Option)
+            {
+                case Option.AddressExpired:
+                case Option.PrepaidExpired:
+                case Option.PrepaidExhausted:
+                    serializeObject = new SystemMessage(SystemMessageCategory.Notice, "GameUI_Heroes_Cafe_Expired");
+                    flag = true;
+                    break;
+                case Option.WelcomePrepaid:
+                    if (Response.Argument > 60)
+                    {
+                        serializeObject = new SystemMessage(SystemMessageCategory.Notice, "GameUI_Heroes_Cafe_TimeLeft", new object[1]
+                        {
+              (object) (Response.Argument / 60)
+                        });
+                        break;
+                    }
+                    serializeObject = new SystemMessage(SystemMessageCategory.Notice, "GameUI_Heroes_Cafe_TimeLeft_LessThanOneHour");
+                    break;
+            }
+            if (serializeObject == null)
+                return;
+            Log<CafeAuthJPNVersionService>.Logger.InfoFormat("Response from CafeAuth service: {0}", (object)Response);
+            CafeAuth cafeAuth;
 
-		public AsyncResultSync BeginLogin(string nexonID, string characterID, IPAddress loginAddress, IPAddress remoteAddress, bool canTry, bool isTrial, MachineID machineID, int gameRoomClient, object state)
+            if (!this.NxIDToEntityDic.TryGetValue(Response.NexonID, out cafeAuth))
+            {
+                return;
+            }
+
+            SendPacket sendPacket = SendPacket.Create<SystemMessage>(serializeObject);
+            cafeAuth.FrontendConn.RequestOperation((Operation)sendPacket);
+            if (!flag)
+            {
+                return;
+            }
+
+            Scheduler.Schedule(this.Thread, Job.Create<CafeAuth>(new Action<CafeAuth>(this.Kick_User), cafeAuth), 5000);
+        }
+
+
+        public AsyncResultSync BeginLogin(string nexonID, string characterID, IPAddress loginAddress, IPAddress remoteAddress, bool canTry, bool isTrial, MachineID machineID, int gameRoomClient, object state)
 		{
 			if (!this.Valid)
 			{
