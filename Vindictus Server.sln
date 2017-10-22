@@ -101,6 +101,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSService", "DSService\DSSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMOChannelService", "MMOChannelService\MMOChannelService\MMOChannelService.csproj", "{DA911B67-7DDA-4AAF-A7F8-8600F20C51C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeService", "TradeService\TradeService\TradeService.csproj", "{1BF94F45-1680-45C1-8354-62D72DB498C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalkService", "TalkService\TalkService\TalkService.csproj", "{47FB17F4-6C2E-4093-B643-7267E5C6AC30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -499,6 +503,22 @@ Global
 		{DA911B67-7DDA-4AAF-A7F8-8600F20C51C9}.Release|x64.Build.0 = Release|x64
 		{DA911B67-7DDA-4AAF-A7F8-8600F20C51C9}.Release|x86.ActiveCfg = Release|x86
 		{DA911B67-7DDA-4AAF-A7F8-8600F20C51C9}.Release|x86.Build.0 = Release|x86
+		{1BF94F45-1680-45C1-8354-62D72DB498C6}.Debug|x64.ActiveCfg = Debug|x64
+		{1BF94F45-1680-45C1-8354-62D72DB498C6}.Debug|x64.Build.0 = Debug|x64
+		{1BF94F45-1680-45C1-8354-62D72DB498C6}.Debug|x86.ActiveCfg = Debug|x86
+		{1BF94F45-1680-45C1-8354-62D72DB498C6}.Debug|x86.Build.0 = Debug|x86
+		{1BF94F45-1680-45C1-8354-62D72DB498C6}.Release|x64.ActiveCfg = Release|x64
+		{1BF94F45-1680-45C1-8354-62D72DB498C6}.Release|x64.Build.0 = Release|x64
+		{1BF94F45-1680-45C1-8354-62D72DB498C6}.Release|x86.ActiveCfg = Release|x86
+		{1BF94F45-1680-45C1-8354-62D72DB498C6}.Release|x86.Build.0 = Release|x86
+		{47FB17F4-6C2E-4093-B643-7267E5C6AC30}.Debug|x64.ActiveCfg = Debug|x64
+		{47FB17F4-6C2E-4093-B643-7267E5C6AC30}.Debug|x64.Build.0 = Debug|x64
+		{47FB17F4-6C2E-4093-B643-7267E5C6AC30}.Debug|x86.ActiveCfg = Debug|x86
+		{47FB17F4-6C2E-4093-B643-7267E5C6AC30}.Debug|x86.Build.0 = Debug|x86
+		{47FB17F4-6C2E-4093-B643-7267E5C6AC30}.Release|x64.ActiveCfg = Release|x64
+		{47FB17F4-6C2E-4093-B643-7267E5C6AC30}.Release|x64.Build.0 = Release|x64
+		{47FB17F4-6C2E-4093-B643-7267E5C6AC30}.Release|x86.ActiveCfg = Release|x86
+		{47FB17F4-6C2E-4093-B643-7267E5C6AC30}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
